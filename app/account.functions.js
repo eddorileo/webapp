@@ -5,7 +5,7 @@ function loggedIn(){
         status: (localStorage.getItem("apikey")) ? true : false
     }
     var urlParams = new URLSearchParams(window.location.search);
-    if(window.custom_apikey){
+    if(window.infringementreport_custom_apikey){
         ret.apikey = window.infringementreport_custom_apikey
     }else if(urlParams.has('share')){
         ret.apikey = "share:"+urlParams.get('share')
