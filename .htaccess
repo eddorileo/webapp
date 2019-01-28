@@ -1,0 +1,54 @@
+Options -Indexes 
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteRule ^(.*/)?favicon.(ico|png) /templates/infringementreport/images/icons/afavicon.$2 [L]
+RewriteRule ^(.*/)?apple-touch-icon.png /templates/infringementreport/images/icons/aapple-touch-icon.png [L]
+RewriteRule ^(.*/)?apple-touch-icon-([0-9]*x[0-9]*).png /templates/infringementreport/images/icons/aapple-touch-icon-$2.png [L]
+
+
+
+#APP
+RewriteRule ^login/? app/authentication/login/main.php?%{QUERY_STRING} [L]
+RewriteRule ^logout(?:/|\.php)? app/authentication/logout.html?%{QUERY_STRING} [L]
+RewriteRule ^register/? app/authentication/register/main.php?%{QUERY_STRING} [L]
+RewriteRule ^forgot-password(?:/|\.php)? app/authentication/forgot-password/main.php?%{QUERY_STRING} [L]
+RewriteRule ^forgot_password(?:/|\.php)? app/authentication/forgot-password/main.php?%{QUERY_STRING} [L]
+RewriteRule ^password-reset(?:/|\.php)? app/authentication/password-reset/main.php?%{QUERY_STRING} [L]
+RewriteRule ^password_reset(?:/|\.php)? app/authentication/password-reset/main.php?%{QUERY_STRING} [L]
+
+
+#QUERY
+RewriteRule ^list/([0-9]*)/query app/query/result.php?list_id=$1&%{QUERY_STRING} [L]
+RewriteRule ^query/([0-9]*) app/query/result.php?list_id=$1&%{QUERY_STRING} [L]
+
+#IGNORE
+RewriteRule ^ignore$ app/ignore/list/main.php?%{QUERY_STRING} [L]
+RewriteRule ^list/([0-9]*)/ignore app/ignore/edit/main.php?list_id=$1&%{QUERY_STRING} [L]
+
+#TAG
+RewriteRule ^tag$ app/tag/list/main.php?%{QUERY_STRING} [L]
+RewriteRule ^list/([0-9]*)/tag app/tag/edit/main.php?list_id=$1&%{QUERY_STRING} [L]
+
+#LIST PAGES
+RewriteRule ^adobe.htm /app/list/adobe.htm [L]
+RewriteRule ^list$ app/list/main.php [L]
+RewriteRule ^list/new app/list/new/main.php?list_id=$1 [L]
+RewriteRule ^list/([0-9]*)/edit app/list/edit/main.php?list_id=$1 [L]
+RewriteRule ^list/([0-9]*) https://app.infringement.report/list/$1/edit [L,R=301] 
+
+#NOTIFY
+RewriteRule ^notify$ app/notify/list/main.php?%{QUERY_STRING} [L]
+RewriteRule ^notify/([0-9new]*) app/notify/edit/main.php?notify_id=$1&%{QUERY_STRING} [L]
+
+#MANAGE ACCOUNT
+Redirect 301 /manage-account /manage/account
+RewriteRule ^manage/account$ app/manage/account/main.php?%{QUERY_STRING} [L]
+RewriteRule ^manage/subscription$ app/manage/subscription/main.php?%{QUERY_STRING} [L]
+

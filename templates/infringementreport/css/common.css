@@ -1,0 +1,1211 @@
+/****************************/
+/*** MARK : HTML ELEMENTS ***/
+/****************************/
+@font-face {
+	font-family: 'Monsterrat Bold';
+	src: url('/templates/infringementreport/fonts/monsterrat-bold.eot');
+	src: local('☺'), url('/templates/infringementreport/fonts/monsterrat-bold.woff') format('woff'), url('/templates/infringementreport/fonts/monsterrat-bold.ttf') format('truetype'), url('/templates/infringementreport/fonts/monsterrat-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Monsterrat Light';
+	src: url('/templates/infringementreport/fonts/monsterrat-light.eot');
+	src: local('☺'), url('/templates/infringementreport/fonts/monsterrat-light.woff') format('woff'), url('/templates/infringementreport/fonts/monsterrat-light.ttf') format('truetype'), url('/templates/infringementreport/fonts/monsterrat-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} 
+
+@font-face {
+	font-family: 'Monaco';
+	src: url('/templates/infringementreport/fonts/monaco.eot');
+	src: local('☺'), url('/templates/infringementreport/fonts/monaco.woff') format('woff'), url('/templates/infringementreport/fonts/monaco.ttf') format('truetype'), url('/templates/infringementreport/fonts/monaco.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+    font-family: 'Monsterrat Light', 'Arial', Verdana;
+    font-size: 14px;
+    animation-name: fadeAnimation;
+    animation-duration: 2s;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* For paage fade in animation */
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+    /* Animates page contents when the page is resized */
+div {
+    transition: 0.01s;
+}
+
+p,
+.para {
+font-family: 'Monsterrat Light';
+font-size: 16px;
+display: block;
+line-height: 1.45em;
+margin: 0 0 2.3em 0;
+padding: 0px;
+}
+
+ul,
+ol,
+dl {
+font-size: inherit;    
+}
+
+address {
+    font-style: normal;
+}
+
+address label {
+font-weight: bold;   
+}
+
+a, 
+a:hover {
+    text-decoration: none;
+}
+
+b,
+strong {
+    font-family: 'Monsterrat Bold';
+    font-weight: normal;
+}
+
+i, 
+em {
+font-style: italic;
+}
+
+hr {
+display: block;
+}
+
+img {
+ max-width: 100%;   
+}
+/***************************/
+/*** END : HTML ELEMENTS ***/
+/***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************/
+/*** MARK : H ELEMENTS ***/
+/*************************/
+h1, .h1,
+h2, .h2 {
+    font-family: 'Monsterrat Bold';
+    font-weight: normal;
+}
+
+h1.headline,
+.h1.headline {
+    font-size: 8em;
+    text-align: center;
+    line-height: 1.15em;
+    margin: 0 0 0.8em 0;
+    padding: 0;
+}
+
+
+h1.light {
+    font-family: 'Monsterrat Light';    
+    font-size: 8em;
+    font-weight: normal;
+}
+
+
+h2,
+.h2 {
+font-size: 3em;
+line-height: 1.15em;
+display: block;
+margin: 0 0 1em 0;
+padding: 0;
+}
+
+h2.large,
+.h2.large {
+    font-size: 3.4em;
+}
+
+h3,
+.h3 {
+    font-size: 2.4em;
+    font-weight: normal;
+    display: block;
+    margin: 0 0 1em 0;
+}
+
+
+h3.medium,
+.h3.medium {
+    font-size: 2.65em;
+    font-weight: normal;
+    display: block;
+    margin: 0 0 0.75em 0;
+}
+
+
+
+h3.font-md,
+.h3.font-md {
+    font-family: 'Monsterrat Bold';
+    font-size: 2.4em;
+    font-weight: normal;
+}
+
+h4,
+.h4 {
+font-family: 'Monsterrat Bold';
+font-size: 2.2em;
+font-weight: normal;
+display: block;
+margin: 0 0 1em 0;
+}
+
+h5,
+.h5 {
+    font-family: 'Monsterrat Bold';
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    line-height: 1.45em;
+    margin: 0 0 1.3em 0;
+    padding: 0px;
+}
+
+h6,
+.h6 {
+font-size: 11px;
+display: block;
+margin: 0 0 1em 0;
+}
+/************************/
+/*** END : H ELEMENTS ***/
+/************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************/
+/*** MARK : ICONS ***/
+/********************/
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-menu-toggle {
+	width: 51px;
+	height: 33px;
+	background-position: -132px -14px;
+}
+
+.icon-menu-close {
+    width: 27px;
+	height: 27px;
+    background-position: -72px -17px;
+}
+
+.icon-down-arrow {
+	width: 20px;
+	height: 20px;
+    background-position: -16px -76px;
+}
+
+.icon-json-file {
+	width: 22px;
+	height: 26px;
+    background-position: -72px -73px;
+}
+
+.ion-close-circled, 
+.ion-close-circled:hover {
+    font-size: 1.08em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-check-circle {
+	width: 48px;
+	height: 48px;
+	background-position: -22px -150px;
+}
+
+.icon-add {
+    width: 18px;
+    height: 19px;
+    background-position: -156px -217px;
+}
+
+.icon-add.hover {
+    width: 18px;
+    height: 19px;
+    background-position: -156px -167px;
+}
+
+.icon-trash {
+    width: 14px;
+    height: 18px;
+    background-position: -217px -217px;
+}
+
+.icon-trash.hover {
+    width: 14px;
+    height: 18px;
+    background-position: -217px -167px;
+}
+
+.icon-search {
+    width: 15px;
+    height: 18px;
+    background-position: -259px -217px;
+}
+
+.icon-search.hover {
+    width: 15px;
+    height: 18px;
+    background-position: -259px -167px;
+}
+
+.icon-tags {
+    width: 28px;
+    height: 24px;
+    background-position: -132px -75px;
+    transform: scale(0.6,0.6);
+    margin: 0 -5px;
+}
+
+.icon-settings {
+    width: 36px;
+    height: 36px;
+    background-position: -181px -67px;
+    transform: scale(0.6,0.6);
+    margin: 0 -5px;
+}
+
+.icon-export {
+    width: 35px;
+    height: 31px;
+    background-position: -241px -70px;
+    transform: scale(0.6,0.6);
+    margin: 0 -5px;
+}
+
+.icon-check-success {
+    width: 14px;
+    height: 14px;
+    vertical-align: sub;
+    background-position: -306px -80px;
+}
+
+.icon-check-success {
+    width: 19px;
+    height: 19px;
+    background-position: -304px -78px;
+    transform: scale(0.6,0.6);
+    margin: 0 -5px -2px -2px;
+}
+/*******************/
+/*** END : ICONS ***/
+/*******************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************/
+/*** MARK : SPACING ***/
+/**********************/
+/* 
+    Margin Top Buffer 
+*/
+.top-lg-buffer {
+    display: block;
+    margin-top: 4em!important;
+}
+
+.top-lg-large-buffer {
+    display: block;
+    margin-top: 3.8em!important;
+}
+
+.top-lg-high-buffer {
+    display: block;
+    margin-top: 3.6em!important;
+}
+
+.top-lg-medium-buffer {
+    display: block;
+    margin-top: 3.4em!important;
+}
+
+.top-lg-small-buffer {
+    display: block;
+    margin-top: 3.2em!important;
+}
+
+.top-md-buffer {
+    display: block;
+    margin-top: 3em!important;
+}
+
+.top-md-large-buffer {
+    display: block;
+    margin-top: 2.8em!important;
+}
+
+.top-md-high-buffer {
+    display: block;
+    margin-top: 2.6em!important;
+}
+
+.top-md-medium-buffer {
+    display: block;
+    margin-top: 2.4em!important;
+}
+
+.top-md-small-buffer {
+    display: block;
+    margin-top: 2.2em!important;
+}
+
+.top-sm-buffer {
+    display: block;
+    margin-top: 2em!important;
+}
+
+.top-sm-large-buffer {
+    display: block;
+    margin-top: 1.8em!important;
+}
+
+.top-sm-high-buffer {
+    display: block;
+    margin-top: 1.6em!important;
+}
+
+.top-sm-medium-buffer {
+    display: block;
+    margin-top: 1.4em!important;
+}
+
+.top-sm-small-buffer {
+    display: block;
+    margin-top: 1.2em!important;
+}
+
+.top-xs-buffer {
+    display: block;
+    margin-top: 1em!important;
+}
+
+.top-xs-large-buffer {
+    display: block;
+    margin-top: 0.8em!important;
+}
+
+.top-xs-high-buffer {
+    display: block;
+    margin-top: 0.6em!important;
+}
+
+.top-xs-medium-buffer {
+    display: block;
+    margin-top: 0.4em!important;
+}
+
+.top-xs-small-buffer {
+    display: block;
+    margin-top: 0.2em!important;
+}
+
+/* 
+    Margin Bottom Buffer 
+*/
+.base-lg-buffer {
+    display: block;
+    margin-bottom: 4em!important;
+}
+
+.base-lg-large-buffer {
+    display: block;
+    margin-bottom: 3.8em!important;
+}
+
+.base-lg-high-buffer {
+    display: block;
+    margin-bottom: 3.6em!important;
+}
+
+.base-lg-medium-buffer {
+    display: block;
+    margin-bottom: 3.4em!important;
+}
+
+.base-lg-small-buffer {
+    display: block;
+    margin-bottom: 3.2em!important;
+}
+
+.base-md-buffer {
+    display: block;
+    margin-bottom: 3em!important;
+}
+
+.base-md-large-buffer {
+    display: block;
+    margin-bottom: 2.8em!important;
+}
+
+.base-md-high-buffer {
+    display: block;
+    margin-bottom: 2.6em!important;
+}
+
+.base-md-medium-buffer {
+    display: block;
+    margin-bottom: 2.4em!important;
+}
+
+.base-md-small-buffer {
+    display: block;
+    margin-bottom: 2.2em!important;
+}
+
+.base-sm-buffer {
+    display: block;
+    margin-bottom: 2em!important;
+}
+
+.base-sm-large-buffer {
+    display: block;
+    margin-bottom: 1.8em!important;
+}
+
+.base-sm-high-buffer {
+    display: block;
+    margin-bottom: 1.6em!important;
+}
+
+.base-sm-medium-buffer {
+    display: block;
+    margin-bottom: 1.4em!important;
+}
+
+.base-sm-small-buffer {
+    display: block;
+    margin-bottom: 1.2em!important;
+}
+
+.base-xs-buffer {
+    display: block;
+    margin-bottom: 1em!important;
+}
+
+.base-xs-large-buffer {
+    display: block;
+    margin-bottom: 0.8em!important;
+}
+
+.base-xs-high-buffer {
+    display: block;
+    margin-bottom: 0.6em!important;
+}
+
+.base-xs-medium-buffer {
+    display: block;
+    margin-bottom: 0.4em!important;
+}
+
+.base-xs-small-buffer {
+    display: block;
+    margin-bottom: 0.2em!important;
+}
+
+/*
+    Line Height Buffer (Vertical Space)
+*/
+.lg-line-space {
+    line-height: 4em!important;
+}
+
+.md-line-space {
+    line-height: 3em!important;
+}
+
+.sm-line-space {
+    line-height: 2em!important;
+}
+
+.xs-line-space {
+    line-height: 1em!important;
+}
+/*********************/
+/*** END : SPACING ***/
+/*********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+/*** MARK : GENERAL ELEMENTS ***/
+/*******************************/
+.main {
+	width: 100%;
+    max-width: 1284px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*
+	[ Section ]
+*/
+.section {
+	padding: 12em 0;
+}
+
+.word-break {
+    word-break: break-all;
+    display: inline-block;
+    padding-right: 3em;
+}
+
+.txt-left {
+	text-align: left!important;
+}
+
+.txt-center {
+    text-align: center;
+    display: block;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.inline {
+    display: inline-block!important;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.txt-sm {
+    font-size: 12px;
+}
+
+
+
+
+
+/*
+	[ Table ]
+*/
+.table {
+	display: table;
+}
+
+.cell {
+	display: table-cell;
+}
+
+/*
+    Width 
+*/
+
+.max {
+    width: 100%;
+}
+
+/*
+.medium {
+    width: 50%;
+}
+*/
+
+.small {
+    width: 25%;
+}
+
+/*
+	[ Table Primary ]
+*/
+.table-primary {
+	width: 100%;
+}
+
+.table-primary tbody {
+	width: 100%;
+}
+
+.table-primary tr td:first-child {
+	width: 100%;
+}
+/******************************/
+/*** END : GENERAL ELEMENTS ***/
+/******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************************/
+/*** MARK : FORMS / BUTTONS / LINKS ***/
+/**************************************/
+a {
+outline: none;
+text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.link,
+.link:hover {
+    text-decoration: underline;
+}
+
+.link-a {
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    transition: 0.2s;
+}
+.btn-small {
+    font-size: 1.6em;    
+    margin: 0 0 1em 0;
+    padding: 0.35em 0.9em;
+}
+.btn-mid {
+    font-size: 2em;    
+    margin: 0 0 1em 0;
+    padding: 0.5em 1.3em;
+}
+.btn-normal {
+    font-size: 2.4em;    
+    margin: 0 0 1em 0;
+    padding: 0.7em 1.8em;
+}
+
+.btn-medium {
+    font-size: 16px;    
+    margin: 0 0 1em 0;
+    padding: 0.7em 2.5em;
+}
+
+.btn-outline-light {
+    font-size: 2em;    
+    margin: 0 0 1em 0;
+    padding: 0.7em 1em;
+}
+
+
+
+
+
+
+/*
+    [ Button Action Group ]
+*/
+.btn-action-group {
+    display: table;
+    border-spacing: 8px 0px;
+}
+
+.btn-action-group .btn {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 1em;    
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 0 1em 0;
+    padding: 0 0.7em;
+}
+
+
+
+
+
+/*
+	[ Form ]
+*/
+form fieldset {
+    margin: 0 0 6em 0;
+    padding: 0;
+}
+
+legend {
+    width: 100%;
+    font-family: 'Monsterrat Bold';
+    font-size: 3em;
+    line-height: 1.2em;
+    text-align: center;
+    display: block;
+    margin: 0 0 1.3em 0;
+}
+
+legend.normal {
+    font-size: 16px;
+    text-align: left;
+    margin: 0 0 1.1em 0;
+}
+
+label,
+.label {
+    font-family: 'Monsterrat Bold';
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    margin: 0 0 1.1em 0;
+}
+
+label.normal {
+    font-family: 'Monsterrat Light';
+    margin: 0 0 0.7em 0;
+}
+
+input[type="text"],input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea,
+.input-file {
+    -webkit-appearance: none;
+    -moz-border-radius: 0px;
+    font-family: 'Monsterrat Light';
+    font-size: 16px;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0.7em 1.2em;
+}
+
+/*
+input:disabled {
+    -webkit-opacity: 1;
+    padding: 0;
+}
+*/
+
+/*************************************/
+/*** END : FORMS / BUTTONS / LINKS ***/
+/*************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+					/* [ MARK: < 576PX | EXTRA SMALL | COL ] */
+							@media (max-width: 576px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+					/* [ END: < 576PX | EXTRA SMALL | COL ] */
+
+										}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+						/* [ MARK: > 576PX | SMALL | COL-SM ] */
+
+								@media (min-width: 576px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+						/* [ END: > 576PX | SMALL | COL-SM ] */
+
+											}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+						/* [ MARK: > 768PX | MEDIUM | COL-MD ] */
+					
+								@media (min-width: 768px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+							/* [ END: > 768PX | MEDIUM | COL-MD ] */
+												} 
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+							/* [ MARK: > 992PX | LARGE | COL-LG ] */
+
+									@media (min-width: 992px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+							/* [ END: > 992PX | LARGE | COL-LG ] */
+
+											}
+
+/***********************************************************************************************/
+/***********************************************************************************************/

@@ -1,0 +1,10 @@
+.list-label-editing {
+    overflow:none;
+    padding: 10px;
+    width:100%;
+    border: 2px #f2cd13 solid;
+    margin-bottom: 15px
+}
+#save_list_label {
+    display: none; margin-left: 25px; margin-top: -10px; cursor: pointer; background-color: rgb(242, 205, 19); color: white;
+}

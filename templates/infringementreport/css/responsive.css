@@ -1,0 +1,567 @@
+
+/**********************/
+/*** GLOBAL CLASSES ***/
+/**********************/
+@media only screen and (max-width: 767px) {
+    .word-break {
+        padding-right: 1em;
+    }
+    
+    .base-md-high-buffer {
+        margin-bottom: 35px!important;
+    }
+}
+/**************************/
+/*** END GLOBAL CLASSES ***/
+/**************************/
+
+
+
+
+
+
+
+
+
+
+/**********************/
+/*** BASIC ELEMENTS ***/
+/**********************/
+@media only screen and (max-width: 991px) {
+    body {
+        font-size: 9px;
+    }
+    
+    p,
+    .para,
+    .btn-medium {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 8px;
+    }
+    
+    p,
+    .para,
+    .btn-medium {
+        font-size: 15px;
+    }
+}
+/**************************/
+/*** END BASIC ELEMENTS ***/
+/**************************/
+
+
+
+
+
+
+
+
+/******************/
+/*** H ELEMENTS ***/
+/******************/
+@media only screen and (max-width: 991px) {
+    h1.headline,
+    h1.light {
+        font-size: 6.5em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h1.headline,
+    h1.light {
+        font-size: 5em;
+    }
+}
+/**********************/
+/*** END H ELEMENTS ***/
+/**********************/
+
+
+
+
+
+
+
+
+/*********************/
+/*** FORM ELEMENTS ***/
+/*********************/
+@media only screen and (max-width: 1200px) {
+    .jFiler-theme-default .jFiler-input-caption {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea,
+    label {
+        font-size: 15px;
+    }
+
+/* 
+    Custom Input Radio
+*/
+    .label-radio .radio-button {
+        top: 2px;
+    }
+
+/*
+    Search Form
+*/
+    
+    .search-form .row > div {
+        margin-bottom: 4em;
+    }
+    
+    
+    .search-form .cs-checkbox {
+        margin: 3px 10px 0 0;
+    }
+    
+    .search-form textarea {
+        height: 300px;
+    }
+    
+    .jFiler-theme-default .jFiler-input {
+        font-size: 15px;
+    }
+    
+    .jFiler-theme-default .jFiler-input-button {
+        width: 150px;
+    }
+    
+    .jFiler-theme-default .jFiler-input-caption {
+        width: 76%;
+    }
+    
+/*
+    Login Form
+*/
+    .login-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+/*
+    Custom Input Radio
+*/
+    
+    .label-radio .radio-button {
+        width: 20px;
+        height: 20px;
+        top: 2px;
+    }
+
+    .label-radio .radio-button:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .search-form .row > div {
+        margin-bottom: 4em;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea, 
+    label {
+        font-size: 15px;
+    }
+    
+
+    .search-form textarea {
+        height: 250px;
+    }
+    
+    .jFiler-theme-default .jFiler-input {
+        font-size: 15px;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .jFiler-theme-default .jFiler-input-button {
+        width: 130px;
+        height: 45px;
+    }
+    
+    
+    .jFiler-theme-default .jFiler-input-caption {
+        height: 30px;
+        padding-left: 0;
+    }
+    
+}
+/*************************/
+/*** END FORM ELEMENTS ***/
+/*************************/
+
+
+
+
+
+
+
+
+/***********************/
+/*** BUTTONS & LINKS ***/
+/***********************/
+
+/***************************/
+/*** END BUTTONS & LINKS ***/
+/***************************/
+
+
+
+
+
+
+
+/**********************/
+/*** WEBSITE HEADER ***/
+/**********************/
+@media only screen and (max-width: 991px) {
+    #page-header {
+        font-size: 9px;
+    }
+    
+    #primary-menu {
+        width: 128px;
+    }
+    
+    #navbar-brand img {
+        width: 210px;
+    }
+    
+    #secondary-menu {
+        width: 128px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    #page-header {
+        font-size: 8px;
+    }
+
+    #primary-menu {
+        font-size: 1.9em;
+    }
+
+    #secondary-menu {
+        display: none;
+    }
+
+    #primary-menu ul:before {
+        transition: 0.5s;
+    }
+
+    #primary-menu ul.menu-visible:before {
+        transition: 0.5s;
+    }
+
+    #primary-menu ul > li {
+        transition: 0.5s;
+    }
+
+    #primary-menu ul.menu-visible > li {
+        transition: 0.5s;
+    }
+
+    #navbar-brand {
+        text-align: right;
+    }
+}
+/**************************/
+/*** END WEBSITE HEADER ***/
+/**************************/
+
+
+
+
+
+
+
+
+
+
+/************************/
+/*** WEBSITE CONTENTS ***/
+/************************/
+@media only screen and (max-width: 991px) {
+    #page-content {
+        font-size: 7px;
+        padding-bottom: 100px;
+    }
+    
+    .subhead {
+        width: 100%!important;
+        font-size: 2.5em;
+    }
+
+/*
+    [ Checklist ]
+*/
+    ul.checklist {
+        font-size: 2.5em;
+    }
+
+    ul.checklist li:before {
+        transform: scale(0.75,0.75);
+    }
+    
+/*
+    Featured  
+*/
+    .featured {
+        margin: 100px 0 0 0;
+    }
+    
+    .featured .col-md-4 {
+        margin: 0 auto;
+    }
+    
+    .featured .col-md-4:first-child {
+        width: 58%;
+    }
+
+    .featured .col-md-4:nth-child(2) {
+        width: 44%;
+    }
+
+    .featured .col-md-4:last-child {
+        width: 44%;
+    }
+
+/*
+    List
+*/
+    ul.list li:before {
+        top: 0;
+    }
+
+/*
+    Code Block  
+*/
+    .code-block {
+        max-height: 380px;
+    }
+    
+    
+    
+/*
+    Membership Plan
+*/
+    #membership-plan {
+        width: 100%;
+    }
+    
+/*
+    Slider Wrap   
+*/
+    #slider-wrap {
+        margin: 0 25px 6em 25px;
+    }
+
+/*
+    Custom Grid
+*/
+    .col-md-6.col-md-offset-3 {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    /*
+    [ Primary Sidebar ]
+*/
+    .primary-sidebar .widget-toggle {
+        display: block;
+    }
+
+    .primary-sidebar .widget-group {
+        min-height: 400px;
+        display: none;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+    }
+
+    .primary-sidebar .widget-toggle.open .ion-arrow-down-b:before {
+        content: "\f10d";
+    }
+} /* End 991px */
+
+
+
+
+@media only screen and (max-width: 767px) {
+    #page-content {
+        font-size: 7px;
+        padding-bottom: 0;
+    }
+    
+/*
+    Featured
+*/
+    .featured {
+        margin-top: 75px;
+    }
+    
+    .featured .col-md-4 {
+        width: 100%!important;
+    }
+    
+/*
+    Code Block  
+*/
+    .code-block {
+        max-height: 300px;
+    }
+    
+
+    
+/*
+    Membership Plan
+*/  
+    #membership-plan .nav-tabs > li {
+        width: 32%;
+    }
+
+    #membership-plan .nav-tabs > li#value-plan {
+        margin: 0 2%;
+    }
+    
+    #membership-plan .nav-tabs > li > a {
+        font-size: 1.9em;
+        padding: 8px 5px;
+    }
+    
+    #membership-plan .plan-details {
+        width: 100%;
+    }
+    
+    
+    
+/*
+    Custom Grid
+*/
+    .col-md-6.col-md-offset-3 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+/*
+    [ Section B ]
+*/
+    .section-b .cell {
+        width: 100%;
+        display: block;
+    }
+
+
+
+
+
+
+/*
+    [ Panel Result Content ]
+*/
+    .panel-result-content .figures img {
+        max-width: 120px;
+    }
+
+
+
+
+
+
+
+/*
+    [ Panel Result Footer ]
+*/
+    .panel-result-footer .page-options {
+        text-align: center;
+        padding: 2em 0;
+    }
+
+}
+
+
+
+
+
+@media (min-width: 992px) {
+    .primary-sidebar .widget-group {
+        display: block!important;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    #page-content {
+        font-size: 10px;
+    }
+}
+/****************************/
+/*** END WEBSITE CONTENTS ***/
+/****************************/
+
+
+
+
+
+
+
+
+/**********************/
+/*** WEBSITE FOOTER ***/
+/**********************/
+@media only screen and (max-width: 991px) {
+    #page-footer {
+        padding: 25px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #page-footer .cell {
+        width: 100%;
+        display: block;
+    }
+
+    #page-footer img {
+        max-width: 120px;
+    }
+}
+/**************************/
+/*** END WEBSITE FOOTER ***/
+/**************************/
+
+
+
+
+
+
+
+
+
+
+
+
