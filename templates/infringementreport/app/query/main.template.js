@@ -166,7 +166,7 @@ function queryResultTemplate(result){
         </div>
         
 
-        <div id="${main.id}-thetags">${tagButtons(result.resolved_tags,{host: main.host,result_id: main.id, tag_id:((main.tag && main.tag.length > 0) ? main.tag[0] : 0)})}</div>
+        <div id="${main.id}-thetags">${tagButtons(result.resolved_tags,{host: main.host,result_id: main.id, tag_id:((main.tag && main.tag.length > 0) ? main.tag : 0)})}</div>
         <div id="${main.id}-tagfollowup"></div>
     </article>
         `
@@ -200,7 +200,7 @@ function additionalResultTemplate(results,resolved_tags){
                                     
                                 </div>
                             </div>
-                            <div id="${main.id}-thetags">${tagButtons(resolved_tags,{host: main.host,result_id: main.id, tag_id:((main.tag && main.tag.length > 0) ? main.tag[0] : 0)})}</div>
+                            <div id="${main.id}-thetags">${tagButtons(resolved_tags,{host: main.host,result_id: main.id, tag_id:((main.tag && main.tag.length > 0) ? main.tag : 0)})}</div>
                             <div id="${main.id}-tagfollowup"></div>
 
                 </td>
