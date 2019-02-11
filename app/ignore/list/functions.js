@@ -1,10 +1,12 @@
 function initPage(){
     apiCall({
         method:'GET',
-        endpoint:'/ignore',
+        endpoint:'/cases',
         postAction: {action: "nothing"},
         callback: function(result) {
-            $("#page_container").html(ignoreListPageTemplate(result))
+            $("#page_container").html(casesListPageTemplate(result))
         }
     })
 }
+
+

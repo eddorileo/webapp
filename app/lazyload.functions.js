@@ -13,6 +13,7 @@
       $.fn.unveil = function(threshold, callback) {
     
         var $w = $(window),
+            $container_images = $("#container_images"),
             th = threshold || 0,
             retina = window.devicePixelRatio > 1,
             attrib = retina? "data-src-retina" : "data-src",
@@ -46,7 +47,25 @@
         }
     
         $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+        
+        function unveil_container_images() {
+          var inview = images.filter(function() {
+            var $e = $(this);
+            if ($e.is(":hidden")) return;
     
+            var wt = $container_images.scrollTop(),
+                wb = wt + $container_images.height(),
+                et = $e.offset().top,
+                eb = et + $e.height();
+    
+            return eb >= wt - th && et <= wb + th;
+          });
+    
+          loaded = inview.trigger("unveil");
+          images = images.not(loaded);
+        }
+    
+        $container_images.on("scroll.unveil resize.unveil lookup.unveil", unveil_container_images);
         unveil();
     
         return this;

@@ -48,7 +48,7 @@
                     echo "production";
                 }
                 ?>"
-        window.infringementreport.registration_secret_key = "<?php echo getenv("registration_secret_key"); ?>"
+        window.infringementreport.register_token = "<?php echo getenv("registration_secret_key"); ?>"
         var _rollbarConfig = {
             accessToken: "41b172a230034c3f8183a6068704c164",
             captureUncaught: true,
@@ -109,27 +109,6 @@
 
     
 <div id="page-content">
-<?php /*Logged In */ 
-
-
-
-    if($_SESSION["change_user_priv"] === true){
-        require_once("/app/app/func.api.php");
-        $res = api(array("endpoint"=>"/2.0/admin/users","apikey"=>$_SESSION["user"]["apikey"]),"GET");
-        if(count($res) > 0){
-            echo "<center><form method=GET><select id=\"changeuserselect\" name=\"admin_change_user\">";
-            foreach($res["users"] as $user){
-                if($user["package_id"]>0){
-                    echo "<option value=\"{$user["apikey"]}\" ".(($user["package_id"]>1)?("style='font-weight: bold;'"):("")).">{$user["user_id"]}".(($user["package_id"]>0)?(" - {$user["package_id"]}"):("")).": {$user["email"]} - M: {$user["monitored_images"]}</option>";
-
-                }
-            }
-
-            echo "</select><input type=submit value=\"Go\"></form>
-                </center>";
-        }
-    }
-?>
 
 <noscript>
     <div class="alert alert-danger">

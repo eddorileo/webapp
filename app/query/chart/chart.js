@@ -5,8 +5,8 @@ function initChart(result){
     ]
     var x = 0,bars = {}
     chartData.forEach(function(date){
-        var date_obj = dateStringToAtom(date.val)
-        chart.push(["Date("+date_obj.year+","+date_obj.month+","+date_obj.day+")",((date.unique_hosts) ? date.unique_hosts : 0), '#f2cd13'])
+        var date_obj = dateStringToAtom(date.val) 
+        chart.push(["Date("+date_obj.year+","+(date_obj.month-1)+","+date_obj.day+")",((date.unique_hosts) ? date.unique_hosts : 0), '#f2cd13'])
         bars["bar#0#"+x] = dateStringToAtom(date.val,"00:00:01")["atom"]+' TO '+dateStringToAtom(date.val,"23:59:59")["atom"]
         x++;
     })

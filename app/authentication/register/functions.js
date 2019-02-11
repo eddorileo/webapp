@@ -10,7 +10,7 @@ function initPage(){
                 method:'POST',
                 endpoint:'/register',
                 body: {
-                    secret_key: window.infringementreport.registration_secret_key,
+                    register_token: window.infringementreport.register_token,
                     email: $("input[name='email']").val(),
                     termsagreed:$('input[name="termsagreed"]').prop("checked"),
                     "marketing-optin": $('input[name="marketing-optin"]').prop("checked")

@@ -12,7 +12,14 @@ RewriteRule ^(.*/)?favicon.(ico|png) /templates/infringementreport/images/icons/
 RewriteRule ^(.*/)?apple-touch-icon.png /templates/infringementreport/images/icons/aapple-touch-icon.png [L]
 RewriteRule ^(.*/)?apple-touch-icon-([0-9]*x[0-9]*).png /templates/infringementreport/images/icons/aapple-touch-icon-$2.png [L]
 
+#CASE
+RewriteRule ^case$ app/case/main.php?%{QUERY_STRING} [L]
 
+
+#PARTNERS
+RewriteRule ^partner$ app/partner/main.php?%{QUERY_STRING} [L]
+RewriteRule ^partner/list app/partner/list/main.php?%{QUERY_STRING} [L]
+RewriteRule ^partner/new app/partner/new/main.php?%{QUERY_STRING} [L]
 
 #APP
 RewriteRule ^login/? app/authentication/login/main.php?%{QUERY_STRING} [L]

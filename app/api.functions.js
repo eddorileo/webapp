@@ -53,22 +53,24 @@ function apiCall(obj){
                 case 403:
                 default:
                     if(data.status == true){
-                        switch(obj.postAction.action) {
-                            case "hide":
-                                console.log("Trying to hide",obj.postAction.e)
-                                obj.postAction.e.style.display="none"
+                        if(obj.postAction){
+                            switch(obj.postAction.action) {
+                                case "hide":
+                                    console.log("Trying to hide",obj.postAction.e)
+                                    obj.postAction.e.style.display="none"
+                                    break;
+                                case "refresh":
+                                    location.reload()
                                 break;
-                            case "refresh":
-                                location.reload()
-                            break;
-                            case "setHTML":
-                                obj.postAction.e.innerHTML="searching..."
-                                break;
-                            case "setListid":
-                                list_id = data.result.list_id
-                                break;
-                            default:
-                                //console.log("Unknown post action")
+                                case "setHTML":
+                                    obj.postAction.e.innerHTML="searching..."
+                                    break;
+                                case "setListid":
+                                    list_id = data.result.list_id
+                                    break;
+                                default:
+                                    //console.log("Unknown post action")
+                            }
                         }
             
                         if(obj.callback){
@@ -87,6 +89,12 @@ function apiCall(obj){
             switch(jqXHR.status){
                 case 401:
                     window.location = "/login?r=" + encodeURI(window.location)
+                break;
+                case 403:
+                    handleAPIError(jqXHR.responseJSON,obj)
+                break; 
+                case 423:
+                    handleAPIError({error: "Your account is not enabled and requires further verification. Please contact support for further assistance."},{apikey: x_api_key})
                 break;
                 default:
                     handleAPIError({error: "This operation could not be completed because the server was unreachable."},{apikey: x_api_key})

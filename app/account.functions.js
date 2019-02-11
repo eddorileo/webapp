@@ -8,6 +8,7 @@ function loggedIn(){
     if(window.infringementreport_custom_apikey){
         ret.apikey = window.infringementreport_custom_apikey
     }else if(urlParams.has('share')){
+        ret.status = true
         ret.apikey = "share:"+urlParams.get('share')
     }else if(ret.status === true){
         ret.apikey = localStorage.getItem("apikey")
@@ -41,6 +42,11 @@ $( document ).ready(function(){
         $("#topRightLink").html(
             `<li><a href="/logout">Log out</a></li>`
         )
+        if(localStorage.is_partner == "true" || localStorage.partner_initial_apikey){
+            $("#topRightLink").append(
+                `<a href="/partner?active=activeUsers" class="link">Partners</a>`
+            )
+        }
         $("#top_naviation").prepend(
             `<center><p class="subhead sm" style="text-align:center!important">
                 <a href="/list" class="link">Image Lists</a> | 

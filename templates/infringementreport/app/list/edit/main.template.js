@@ -69,7 +69,7 @@ function listsEditPageTemplate(user){
                     <div id="addImagesButtonArea">
                         <a href="#" class="btn btn-small" id="addImagesButton">Add New Images</a>
                     </div>
-                    <div style="overflow:auto ;height: 330px;width:100%;border: 2px #f2cd13 solid;" id="container_images">
+                    <div style="border: 2px #f2cd13 solid;" id="container_images">
                     
                     </div>
                     

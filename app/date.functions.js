@@ -10,31 +10,37 @@ function date_relative(unix_timestamp) {
     var msPerDay = msPerHour * 24;
     var msPerMonth = msPerDay * 30;
     var msPerYear = msPerDay * 365;
+
     var current = new Date()
     var elapsed = current - (unix_timestamp*1000);
+    var suffix = " ago"
+    if(elapsed < 0){
+        elapsed = (unix_timestamp*1000) - current
+        suffix = ""
+    }
 
     if (elapsed < msPerMinute) {
-         return Math.round(elapsed/1000) + ' seconds ago';   
+         return Math.round(elapsed/1000) + ' seconds'+suffix;   
     }
 
     else if (elapsed < msPerHour) {
-         return Math.round(elapsed/msPerMinute) + ' minutes ago';   
+         return Math.round(elapsed/msPerMinute) + ' minutes'+suffix;   
     }
 
     else if (elapsed < msPerDay ) {
-         return Math.round(elapsed/msPerHour ) + ' hours ago';   
+         return Math.round(elapsed/msPerHour ) + ' hours'+suffix;   
     }
 
     else if (elapsed < msPerMonth) {
-        return Math.round(elapsed/msPerDay) + ' days ago';   
+        return Math.round(elapsed/msPerDay) + ' days'+suffix;   
     }
 
     else if (elapsed < msPerYear) {
-        return Math.round(elapsed/msPerMonth) + ' months ago';   
+        return Math.round(elapsed/msPerMonth) + ' months'+suffix;   
     }
 
     else {
-        return Math.round(elapsed/msPerYear ) + ' years ago';   
+        return Math.round(elapsed/msPerYear ) + ' years'+suffix;   
     }
 }
 
@@ -52,7 +58,9 @@ function date_relative_short(unix_timestamp) {
     var msPerYear = msPerDay * 365;
     var current = new Date()
     var elapsed = current - (unix_timestamp*1000);
-
+    if(elapsed < 0){
+        elapsed = (unix_timestamp*1000) - current
+    }
     if (elapsed < msPerMinute) {
          return Math.round(elapsed/1000) + 's';   
     }
@@ -114,7 +122,7 @@ function dateStringToAtom(date_string,time){
  
 
     var d = new Date(date_string),
-        month = '' + (d.getMonth() + 1),
+        month = '' + (d.getMonth() +1 ),
         day = '' + d.getDate(),
         year = d.getFullYear();
   

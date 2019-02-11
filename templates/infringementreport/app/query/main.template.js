@@ -148,7 +148,7 @@ function queryResultTemplate(result){
         </div>
 
         <div class="figures">
-            <a href="${main.search_image_url}" target=_blank><img src="/images/bg.png" class="lazyload" data-src="${main.search_image_url_thumbnail}" class="img-responsive" title="Searched (source) image" alt="Searched (source) image" style="width:300px" /></a>
+            <a href="${main.search_image_url_signed}" target=_blank><img src="/images/bg.png" class="lazyload" data-src="${main.search_image_url_thumbnail}" class="img-responsive" title="Searched (source) image" alt="Searched (source) image" style="width:300px" /></a>
 
             <a href="${main.image_url}" target=_blank><img src="/images/bg.png" data-src="${main.image_url_thumbnail}" class="img-responsive"  title="Found image" alt="Found image"  style="width:300px" data-found="true" /></a>
         </div> <!-- figures -->

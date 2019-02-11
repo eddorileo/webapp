@@ -65,7 +65,7 @@ function uploaderSelect(params){
 function initPage(){
     apiCall({
         method:'GET',
-        endpoint:'/list/'+list_id,
+        endpoint:'/list/'+list_id+"?extend=infringements",
         postAction: {action: "nothing"},
         callback: function(list_data) {
         
@@ -163,7 +163,7 @@ function drawImages(images){
     if(images.length > 0){
         images.forEach(function(i){
             $("#container_images").append(
-                `<div style="display: grid; grid-template-columns: 30px 150px 100%; padding:10px"> 
+                `<div style="display: grid; grid-template-columns: 30px 150px 250px 100%; padding:10px"> 
                     <span style="width:30px;">
                         <a href="javascript: void(0)" onclick="apiCall({apikey:'`+loggedIn().apikey+`',method:'DELETE',endpoint:'/list/`+list_id+`/image/`+i.image_id+`',postAction:{action: 'hide',e: this.parentNode.parentNode}})\"><img alt=\"Delete Image\" title=\"Delete Image\" src=\"https://png.icons8.com/windows/24/e74c3c/trash.png\"/></a>                    
                     </span>
@@ -172,11 +172,16 @@ function drawImages(images){
                             <img src="/images/bg.png" data-src="`+i.thumbnail_url+`" style="width: 140px;" >
                         </a>
                     </span>
-                    <span>
+                    <span style="width:250px">
                         <p><a href="`+i.signed_image_url+`" target=_blank>`+i.filename+`</a><br>
-                        <strong>Last queued:</strong> `+dynamicDate(i.last_search_start)+`<br>
-                        <strong>Last search:</strong> `+dynamicDate(i.last_search_complete)+`<BR>
+                        <strong>Infringing domains:</strong> `+i.unique_hosts+`<BR>
+                        <strong>Infringing pages:</strong> `+i.unique_pages+`<BR>
                         <a href=\"/list/`+list_id+`/query?filters[image_id-eql]=`+i.image_id+`" class="link">View infringements</a>
+                        </p> 
+                    </span>
+                    <span>
+                        <p><strong>Last queued:</strong> `+dynamicDate(i.last_search_start)+`<br>
+                        <strong>Last search:</strong> `+dynamicDate(i.last_search_complete)+`<BR>
                         </p> 
                     </span>
                 </div>`

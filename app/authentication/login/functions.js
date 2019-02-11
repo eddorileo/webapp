@@ -1,5 +1,5 @@
 function initPage(){
-    let searchParams = new URLSearchParams(window.location.search)
+    var searchParams = new URLSearchParams(window.location.search)
     if(searchParams.has('r')){
         var redirect = decodeURIComponent(searchParams.get('r'))
     }
