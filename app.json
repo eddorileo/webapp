@@ -1,0 +1,27 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ],
+  "env": {
+    "registration_secret_key": {
+      "required": true
+    },
+    "template": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "infringementreport-webapp",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

@@ -56,7 +56,7 @@ $( document ).ready(function(){
         if(localStorage.credits){
             var credits = JSON.parse(localStorage.getItem("credits"))
             if(Object.keys(credits).length > 0){
-                if(credits.active[0].package_id == 1){
+                if(credits.active && credits.active.length > 0 && credits.active[0].package_id == 1){
                     $("#top_naviation").prepend(
                         '<div id="loginmessage" class="alert alert-success" role="alert"><center><p style="margin-bottom:0px">Your Infringement.Report trial expires in '+Math.round((credits.active[0].expiry_time-Math.round(new Date().getTime() / 1000))/60/60/24,0)+' days - <a href="/manage/subscription"><u>manage your subscription</u></a>.<br>What would make Infringement.Report better? Let us know at <a href="mailto:hello@infringement.report">hello@infringement.report</a></p></center></div>'
                     )

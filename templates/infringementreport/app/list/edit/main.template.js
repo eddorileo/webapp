@@ -1,4 +1,4 @@
-function listsEditPageTemplate(user){
+function listsEditPageTemplate(params){
     const page = `
     <div class="row">
             <div class="col-md-2">
@@ -10,11 +10,12 @@ function listsEditPageTemplate(user){
                     <h2 id="container_list_label" style="color: #f2cd13;display:inline" contenteditable="true">Loading...</h2>
                     <a class="btn btn-small" id="save_list_label">save</a>
                 </div>
+                ${(params.credits.monitor_strategy == "classic") ? `
                 <div class="row">
                 
                     <div class="col-md-6" style="text-align:right">
                         <strong class="subhead tiny">Monitoring:</strong><br>
-                        <i class="subhead tiny">${user.credits.total["remaining-monitor"]} monitored images left.<BR>
+                        <i class="subhead tiny">${params.credits.total["remaining-monitor"]} monitored images left.<BR>
                         Unmonitored lists are removed after one week.</i>
                     </div>
                     <div class="col-md-4"><div class="onoffswitch " style="margin-left: 5.5em;">
@@ -24,7 +25,7 @@ function listsEditPageTemplate(user){
                             <span class="onoffswitch-switch"></span>
                         </label>
                     </div>
-                </div>
+                </div>` : ``}
             </div>
         </div>
         </div>

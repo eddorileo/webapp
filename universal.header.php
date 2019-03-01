@@ -6,4 +6,4 @@ function template_path($frontend=false){
 function root_path(){
     return "/app";
 }
-$cache_version = 7; //bump when changing JS or CSS files
+$cache_version = 20190218; //bump when changing JS or CSS files

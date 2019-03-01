@@ -1,4 +1,4 @@
-function listsPageTemplate(){
+function listsPageTemplate(params){
     const page = `
     <h1 class="headline">Your search lists</h1>
 
@@ -10,8 +10,10 @@ function listsPageTemplate(){
                 <td><strong>List</strong></td>
                 <td><strong>Images</strong></td>
                 <td><strong>Infringements</strong></td> 
-                <td><strong>Last Search Complete</strong></td>
-                <td><strong>Monitoring</strong></td>
+                ${(params.monitor_strategy === "classic") ? `
+                    <td><strong>Last Search Complete</strong></td>
+                    <td><strong>Monitoring</strong></td>
+                ` : ``}
                 <td><strong>Actions</strong></td>
             </tr>
 
@@ -22,8 +24,8 @@ function listsPageTemplate(){
     return page
 }
 
-function listsTableTemplate(lists){
-    const newRows = `${lists.map(function (list) {
+function listsTableTemplate(params){
+    const newRows = `${params.lists.map(function (list) {
         return `
         <tr id='listrow${list.list_id}'>
             <td><a href="/list/${list.list_id}/query" class="link">${list.list_label}</a></td>
@@ -34,6 +36,7 @@ function listsTableTemplate(lists){
             <td>
                 ${ ((list["unique_hosts"] == 0) ? "No infringements found" : "Domains: "+((!list.unique_hosts) ? 0 : list.unique_hosts)+"<br> Pages: "+((!list.unique_pages) ? 0 : list.unique_pages))}
             </td>
+            ${(params.monitor_strategy === "classic") ? `
             <td id="last_search_td_${list.list_id}">
                 ${dynamicDate(list.last_result_search)}
             </td>
@@ -46,10 +49,14 @@ function listsTableTemplate(lists){
                     </label>
                 </div>
             </td>
+            ` : ``}
             <td>
+            
+            ${(params.monitor_strategy === "classic") ? `
                 <a href="javascript: void(0)" onclick="apiCall({method:'GET',endpoint:'/search/${list.list_id}',postAction:{action:'setHTML',e:document.getElementById('last_search_td_${list.list_id}')}})">
                         <img class="spin" onclick="$(this).css({'transform': 'rotate(1440deg)'});" alt="Search List Now" title="Search List Now" src="https://png.icons8.com/windows/24/7f8c8d/synchronize.png"/>
                     </a>
+            ` : `` }
                 <a href="/list/${list.list_id}/edit">
                     <img alt="Edit List" title="Edit List" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/>
                 </a> 

@@ -1,6 +1,8 @@
 function initPage(){
+    var credits = JSON.parse(localStorage.credits)
     $("#page_container").html(
-        listsNewPageTemplate()
+
+        listsNewPageTemplate({monitor_strategy: credits.monitor_strategy})
     )
     $("#createNewList").click(newList)
 }

@@ -45,7 +45,7 @@
 
   ga('send', 'pageview');
 
-if(!((localStorage.hasOwnProperty("is_partner") && Boolean(localStorage.is_partner) == true) || localStorage.hasOwnProperty("partner_initial_apikey")) ){
+if(!((localStorage.hasOwnProperty("is_partner") && localStorage.is_partner === true) || localStorage.hasOwnProperty("partner_initial_apikey")) ){
     window.intercomSettings = {
         app_id: 'rk27078b'
       };

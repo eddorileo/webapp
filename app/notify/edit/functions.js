@@ -72,7 +72,7 @@ function saveNotify(){
         method: (notify_id == "new") ? "POST" : "PATCH",
         body: {
             list_id: list_ids,
-            filter_string: $("input[name='filter_string']").val(),
+            filter_string: "", // no one used for a year, so killing this feature 
             schedule: $('input[name=schedule]:checked').val(),
             type: $("select[name='type']").val(),
             endpoint: $("input[name='endpoint']").val(),

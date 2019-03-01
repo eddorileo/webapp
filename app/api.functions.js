@@ -17,7 +17,7 @@ function apiCall(obj){
         }
         var args = {
                 type: obj.method,
-                url: 'https://api.infringement.report/3.0'+obj.endpoint,
+                url: 'https://api2.infringement.report/3.0'+obj.endpoint,
                 headers: {
                     'x-api-key': x_api_key
                 }

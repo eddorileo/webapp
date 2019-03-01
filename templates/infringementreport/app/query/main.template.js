@@ -156,11 +156,11 @@ function queryResultTemplate(result){
         <p class="base-sm-small-buffer">${(main.description) ? main.description : ""}</p>
         <div class="result-description">
             <div class="result-content">
-                <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}. Seen: ${date_relative_short(atomToUnixTimestamp(main.seen_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+date_relative_short(atomToUnixTimestamp(main.verified_timestamp))+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+date_relative_short(atomToUnixTimestamp(main.verified_timestamp))+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
                 
             </div>
             <div class="tag-overlay">
-                <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}. Seen: ${dynamicDate(atomToUnixTimestamp(main.seen_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp))+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp))+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
                 
             </div>
         </div>
@@ -192,11 +192,11 @@ function additionalResultTemplate(results,resolved_tags){
                 </small></span>
                     <div class="result-description">
                                 <div class="result-content">
-                                    <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}. Seen: ${date_relative_short(atomToUnixTimestamp(main.seen_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+date_relative_short(main.verified_timestamp)+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                                    <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+date_relative_short(main.verified_timestamp)+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
                     
                                 </div>
                                 <div class="tag-overlay">
-                                    <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}. Seen: ${dynamicDate(atomToUnixTimestamp(main.seen_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(main.verified_timestamp)+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                                    <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(main.verified_timestamp)+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
                                     
                                 </div>
                             </div>

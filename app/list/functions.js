@@ -1,6 +1,7 @@
 function renderListPage(params){
-    $("#page_container").html(listsPageTemplate())
-    listsPage(params)
+    var credits = JSON.parse(localStorage.credits)
+    $("#page_container").html(listsPageTemplate({monitor_strategy: credits.monitor_strategy}))
+    listsPage({monitor_strategy: credits.monitor_strategy,...params})
 }
 function listsPage(params){
     window.history.pushState(params,"Lists - Infringment Report", "/list?start=0&rows="+params.rows)
@@ -10,7 +11,8 @@ function listsPage(params){
         postAction: {action: "nothing"},
         callback: function(result) {
             if(typeof result == "object"){
-                var listsHTML = listsTableTemplate(Object.values(result))
+                
+                var listsHTML = listsTableTemplate({lists: Object.values(result),monitor_strategy: params.monitor_strategy})
                 $("#listInfoContainer").append(listsHTML)
                 if(Object.keys(result).length == params.rows){
                     // number of returned rows = max page size, show pagination button
@@ -20,7 +22,7 @@ function listsPage(params){
                     $("#pagination_container a").click( function(event) {
                             event.preventDefault()
                             $("#pagination_container").html("<center><img src=\"/images/loading.gif\"></center>")
-                            listsPage({start: (Number(params.start) + Number(params.rows)),rows: params.rows})
+                            listsPage({start: (Number(params.start) + Number(params.rows)),rows: params.rows, monitor_strategy:params.monitor_strategy})
                         }
                     )
                 }else{

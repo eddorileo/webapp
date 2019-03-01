@@ -1,4 +1,4 @@
-function listsNewPageTemplate(){
+function listsNewPageTemplate(params){
     const page = `
     <div class="row">
             <div class="col-md-2">
@@ -9,7 +9,7 @@ function listsNewPageTemplate(){
                 <strong>List Name:</strong><br>
                 <input type=text class='form-control' id="container_list_label" style="width:100%" value="">
                 <br>This will be used to group and identify your images
-                <div class="row">
+                ${(params.monitor_strategy == "classic") ? `<div class="row">
                 
                     <div class="col-md-6" style="text-align:right">
                         <strong class="subhead tiny">Active Monitoring:</strong><br>
@@ -23,7 +23,7 @@ function listsNewPageTemplate(){
                             <span class="onoffswitch-inner"></span>
                             <span class="onoffswitch-switch"></span>
                         </label>
-                    </div>
+                    </div>` : ``}
                 </div>
             </div>
         </div>

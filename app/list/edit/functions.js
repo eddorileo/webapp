@@ -69,90 +69,88 @@ function initPage(){
         postAction: {action: "nothing"},
         callback: function(list_data) {
         
-            apiCall({
-                method:'GET',
-                endpoint:'/user',
-                postAction: {action: "nothing"},
-                callback: function(user) {
-                    $("#page_container").html(
-                        listsEditPageTemplate(user)
-                    )
-                    setFromListData({field:"list_label", type: "text"},list_data)
-                    setFromListData({field:"monitor",type:"checkbox"},list_data)
-                    $('#uploader-select').show()
-                    $('#uploader-container').hide()
-                    if(list_data.count == 0){
-                        $("#addImagesButtonArea").hide()
-                        $("#addImagesArea").show()
-                    }else{
-                        $("#addImagesButtonArea").show()
-                        $("#addImagesArea").hide()
-                    }
-                    if(list_data.images){
-                        drawImages(list_data.images)
-                    }
-                    click("#chooseUrl",function(event){
-                        uploaderSelect({method:'url',list_id: list_id});
-                    })
-                    click("#chooseUpload",function(event){
-                        uploaderSelect({method:'upload',list_id: list_id});
-                    })
-                    click("#chooseAdobe",function(event){
-                        uploaderSelect({method:'adobe',list_id: list_id});
-                    })
+
+            var credits = JSON.parse(localStorage.credits)
+            
+            $("#page_container").html(
+                listsEditPageTemplate({credits})
+            )
+            setFromListData({field:"list_label", type: "text"},list_data)
+            setFromListData({field:"monitor",type:"checkbox"},list_data)
+            $('#uploader-select').show()
+            $('#uploader-container').hide()
+            if(list_data.count == 0){
+                $("#addImagesButtonArea").hide()
+                $("#addImagesArea").show()
+            }else{
+                $("#addImagesButtonArea").show()
+                $("#addImagesArea").hide()
+            }
+            if(list_data.images){
+                drawImages(list_data.images)
+            }
+            click("#chooseUrl",function(event){
+                uploaderSelect({method:'url',list_id: list_id});
+            })
+            click("#chooseUpload",function(event){
+                uploaderSelect({method:'upload',list_id: list_id});
+            })
+            click("#chooseAdobe",function(event){
+                uploaderSelect({method:'adobe',list_id: list_id});
+            })
+            
+            click("#addImagesButton",function(event){
+                $("#addImagesButtonArea").hide()
+                $("#addImagesArea").show()
+
+            })
+
+            $("#container_list_label").focus(function(event) {
+                $("#save_list_label").show()
+                $("#list_label_box").addClass("list-label-editing")
+            })
+            $("#container_list_label").focusout(function(event) {
+                if($("#container_list_label").text() == list_data.list_label){
+                    $("#save_list_label").hide()
+                    $("#list_label_box").removeClass("list-label-editing")
+                }
+                
+            })
+            click("#save_list_label",
+                function(event) {
                     
-                    click("#addImagesButton",function(event){
-                        $("#addImagesButtonArea").hide()
-                        $("#addImagesArea").show()
-
-                    })
-
-                    $("#container_list_label").focus(function(event) {
-                        $("#save_list_label").show()
-                        $("#list_label_box").addClass("list-label-editing")
-                    })
-                    $("#container_list_label").focusout(function(event) {
-                        if($("#container_list_label").text() == list_data.list_label){
+                    new_list_label = $("#container_list_label").text()
+                    apiCall({
+                        method:'PATCH',
+                        endpoint:'/list/'+list_id,
+                        body: { list_label: new_list_label },
+                        postAction: {action: "nothing"},
+                        callback: function(result) {
+                            list_data.list_label = new_list_label
                             $("#save_list_label").hide()
                             $("#list_label_box").removeClass("list-label-editing")
                         }
-                        
                     })
-                    click("#save_list_label",
-                        function(event) {
-                           
-                            new_list_label = $("#container_list_label").text()
-                            apiCall({
-                                method:'PATCH',
-                                endpoint:'/list/'+list_id,
-                                body: { list_label: new_list_label },
-                                postAction: {action: "nothing"},
-                                callback: function(result) {
-                                    list_data.list_label = new_list_label
-                                    $("#save_list_label").hide()
-                                    $("#list_label_box").removeClass("list-label-editing")
-                                }
-                            })
-                        }
-                    )
-                    $("#container_monitor").change(
-                        function(event)  {
-                            event.preventDefault()
-                            var new_monitor = $("#container_monitor").prop('checked')
-                            apiCall({
-                                method:'PATCH',
-                                endpoint:'/list/'+list_id,
-                                body: { monitor: new_monitor },
-                                postAction: {action: "nothing"},
-                                callback: function(result) {
-                                    list_data.monitor = new_monitor
-                                    setFromListData({field:"monitor",type:"checkbox"},list_data)
-                                }
-                            })
-                        }
-                    )
                 }
-            })
+            )
+            $("#container_monitor").change(
+                function(event)  {
+                    event.preventDefault()
+                    var new_monitor = $("#container_monitor").prop('checked')
+                    apiCall({
+                        method:'PATCH',
+                        endpoint:'/list/'+list_id,
+                        body: { monitor: new_monitor },
+                        postAction: {action: "nothing"},
+                        callback: function(result) {
+                            list_data.monitor = new_monitor
+                            setFromListData({field:"monitor",type:"checkbox"},list_data)
+                        }
+                    })
+                }
+            )
+        
+            
             
         }
     })

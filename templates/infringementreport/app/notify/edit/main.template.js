@@ -17,10 +17,6 @@ function notifyEditPageTemplate(result){
                 return `<label style="display: inline"><input type=checkbox class='form-control list_id' data-list_id="${l.list_id}" ${($.inArray(l.list_id,result.notify.list_id)  !== -1 ) ? "checked" : ""}> ${l.list_label}</label><BR>`
             }).join("")}
         </div>
-        <p class="subhead sm left">
-            <strong>Filter Query:</strong><br>If we should only check for new domains using some custom filters, add them here.<br>
-            <input type=text class='form-control' name="filter_string" style="width:100%" value="${result.notify.filter_string}">
-        </p>
     </div>
     <p class="subhead sm left">
 
