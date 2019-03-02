@@ -133,7 +133,7 @@ function dateStringToAtom(date_string,time){
         day = "0"+day
     }
     var ret = {
-        atom: day+'-'+month+'-'+year+'T'+time+'Z',
+        atom: year+'-'+month+'-'+day+'T'+time+'Z',
         day,
         month,
         year

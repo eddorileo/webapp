@@ -7,7 +7,7 @@ function notifyEditPageTemplate(result){
     <select class="form-control" name="list_sel" id="list_sel" style="width:100%">
 
     <option value='all' ${($.inArray("all",result.notify.list_id)  !== -1 ) ? "selected" : ""}>Todas as Listas</option>
-    <option value='custom' ${($.inArray("all",result.notify.list_id)  !== -1 ) ? "" : "selected"}>Especificar Listas ou Filtros de Relatório...</option>
+    <option value='custom' ${($.inArray("all",result.notify.list_id)  !== -1 ) ? "" : "selected"}>Especificar Listas ou Filtros de Relat&oacute;rio...</option>
     </select> 
     <div id="list_span">
         <div class="subhead sm left" style="display:block;overflow:auto ;height: 250px;border: 2px #f2cd13 solid;">
@@ -40,7 +40,7 @@ function notifyEditPageTemplate(result){
     //ed* <a href="#" id="advancedNotifyLink" class="link">Mudar o formato do email ou alterar para chamadas em outros aplicativos (avan&ccedil;ado)</a><br>
     <div id="advancedNotify" class="subhead sm left">
         <strong>Notification Type:</strong><br>
-        Nós podemos enviar notifica&ccedil;&otilde;es por email ou chamar seu App favorito usando IFTTT ou Zapier<br>
+        N&oacute;s podemos enviar notifica&ccedil;&otilde;es por email ou chamar seu App favorito usando IFTTT ou Zapier<br>
         <select class="form-control" name="type" style="width:100%">
             <option value='email' ${(result.notify.type == "email") ? "selected": ""}>Email</option>
             <option value='postback' ${(result.notify.type == "postback") ? "selected" : ""}>Customizar notifica&ccedil;&atilde;o (via Slack/JIRA/Zapier/IFTTT)</option>

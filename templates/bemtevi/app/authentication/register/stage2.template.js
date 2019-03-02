@@ -2,7 +2,7 @@
 function registerStage2Template(){
     const page = `
     <script type="text/template" id="qq-template-gallery">
-        <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Drop files here">
+        <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Arraste suas imagens aqui">
             <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
                 <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
             </div>
@@ -62,7 +62,7 @@ function registerStage2Template(){
             <dialog class="qq-confirm-dialog-selector">
                 <div class="qq-dialog-message-selector"></div>
                 <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">Não</button>
+                    <button type="button" class="qq-cancel-button-selector">N&atilde;o</button>
                     <button type="button" class="qq-ok-button-selector">Sim</button>
                 </div>
             </dialog>
@@ -84,7 +84,7 @@ function registerStage2Template(){
             <div class="col-sm-8 col-md-8">
                 <h2><a href="/login" class="link">Logar</a> | Registrar</h2>
                 <h2>Upload até 3 imagens para começar seu teste</h2><br>
-                <a class="link sm subhead" id="registerStage2Link" href="#">Não quer carregar imagens agora? Cheque o seu email para os detalhes do login.</a><br>
+                <a class="link sm subhead" id="registerStage2Link" href="#">N&atilde;o quer carregar imagens agora? Cheque o seu email para os detalhes do login.</a><br>
                 <div><div id="fine-uploader-gallery" style="height:330px"></div></div><BR>
                 <a class="btn btn-normal" id="registerStage2Submit" href="#" >Próximo ></a>
             </div>

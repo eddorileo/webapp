@@ -16,7 +16,7 @@ function listsEditPageTemplate(params){
                     <div class="col-md-6" style="text-align:right">
                         <strong class="subhead tiny">Monitorando:</strong><br>
                         <i class="subhead tiny">${params.credits.total["remaining-monitor"]} imagens monitoradas restantes.<BR>
-                        Listas não monitoradas serão removidas após uma semana.</i>
+                        Listas n&atilde;o monitoradas ser&atilde;o removidas ap&oacute;s uma semana.</i>
                     </div>
                     <div class="col-md-4"><div class="onoffswitch " style="margin-left: 5.5em;">
                         <input type="checkbox"  class="onoffswitch-checkbox" id="container_monitor" >
@@ -61,7 +61,7 @@ function listsEditPageTemplate(params){
                                 </td>
                             </tr>
                         </table><BR>
-                            <small>Max size: 10MB and 8000px x 6000px</small>
+                            <small>Tamanho max: 10MB e 8000px x 6000px</small>
                         </span>
                         <span id="uploader-container"></span>
 

@@ -10,7 +10,7 @@ function registerStage2Template(){
                 <span class="qq-upload-drop-area-text-selector"></span>
             </div>
             <div class="qq-upload-button-selector qq-upload-button">
-                <div style="font-size: 1.6em;">Upload files</div>
+                <div style="font-size: 1.6em;">Carrgar arquivos</div>
             </div>
             <span class="qq-drop-processing-selector qq-drop-processing">
                 <span>Processing dropped files...</span>

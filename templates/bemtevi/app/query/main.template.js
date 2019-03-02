@@ -3,7 +3,7 @@ function queryPageTemplate(result,request,resolved_tags){
     const page = `
         <div class="search-panel-top">
         <h1 class="headline txt-left">${result.list.list_label}</h1>
-            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista estão na fila para serem pesquisadas. Você poderá encontrar mais resultados em breve.</div>' : "")}
+            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista est&atilde;o na fila para serem pesquisadas. Você poder&aacute; encontrar mais resultados em breve.</div>' : "")}
  
         <div id="chart_div" style="width:100%;overflow:none"></div>
     </div> <!-- search panel top -->
@@ -32,8 +32,8 @@ function queryPageTemplate(result,request,resolved_tags){
                             }).join('')
                         }
                                 
-                            <li><a href="#" data-tag_id="untagged" class="tag-select tag tag-default ${(resolved_tags.selected_tag == "untagged") ? "active" : "" } ">Sem rótulo</a></li>
-                            <li><a href="/list/${result.list.list_id}/tag">Editar rótulos...</a></li>
+                            <li><a href="#" data-tag_id="untagged" class="tag-select tag tag-default ${(resolved_tags.selected_tag == "untagged") ? "active" : "" } ">Sem r&oacute;tulo</a></li>
+                            <li><a href="/list/${result.list.list_id}/tag">Editar r&oacute;tulos...</a></li>
                         </ul> <!-- tags list -->
                         
                     </div> <!-- widget -->
@@ -45,12 +45,12 @@ function queryPageTemplate(result,request,resolved_tags){
                 <div class="panel-result-header">
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                        <h5>${result.query_result.ngroups} domínios com ${result.query_result.matches} infração</h5>
+                        <h5>${result.query_result.ngroups} domínios com ${result.query_result.matches} infraç&atilde;o</h5>
                     </div> <!-- col -->
 
                     <div class="col-xs-6 col-sm-6 col-md-6 controls txt-sm">
                         <a href="#" id="toggleSettings"><i class="icon icon-settings"></i></a> &nbsp; 
-                        <a href="#" id="exportToCSV"><i class="icon icon-export"></i> Export</a>
+                        <a href="#" id="exportToCSV"><i class="icon icon-export"></i> Exportar</a>
                     </div> <!-- col -->
                 </div> <!-- row -->
                 <div id="settingsArea" style="display:none" class="row">
@@ -60,7 +60,7 @@ function queryPageTemplate(result,request,resolved_tags){
                                 ${[15,50,100,500,1000].map(function (opt) {
                           
                                     return `
-                                    <option value="${opt}" ${(opt == request.state.rows) ? "selected" : ""}>${opt} Resultados Por Página</option>
+                                    <option value="${opt}" ${(opt == request.state.rows) ? "selected" : ""}>${opt} Resultados Por P&aacute;gina</option>
                                     `
                                     
                                 }).join('')}
@@ -156,11 +156,11 @@ function queryResultTemplate(result){
         <p class="base-sm-small-buffer">${(main.description) ? main.description : ""}</p>
         <div class="result-description">
             <div class="result-content">
-                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+date_relative_short(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
+                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+date_relative_short(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem n&atilde;o encontrada na p&aacute;gina"  title="Imagem n&atilde;o encontrada na p&aacute;gina"> Imagem n&atilde;o encontrada na p&aacute;gina'): ""}</span>
                 
             </div>
             <div class="tag-overlay">
-                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
+                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem n&atilde;o encontrada na p&aacute;gina"  title="Imagem n&atilde;o encontrada na p&aacute;gina"> Imagem n&atilde;o encontrada na p&aacute;gina'): ""}</span>
                 
             </div>
         </div>
@@ -192,11 +192,11 @@ function additionalResultTemplate(results,resolved_tags){
                 </small></span>
                     <div class="result-description">
                                 <div class="result-content">
-                                    <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+date_relative_short(main.verified_timestamp) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
+                                    <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+date_relative_short(main.verified_timestamp) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem n&atilde;o encontrada na p&aacute;gina"  title="Imagem n&atilde;o encontrada na p&aacute;gina"> Imagem n&atilde;o encontrada na p&aacute;gina'): ""}</span>
                     
                                 </div>
                                 <div class="tag-overlay">
-                                    <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+dynamicDate(main.verified_timestamp) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
+                                    <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+dynamicDate(main.verified_timestamp) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem n&atilde;o encontrada na p&aacute;gina"  title="Imagem n&atilde;o encontrada na p&aacute;gina"> Imagem n&atilde;o encontrada na p&aacute;gina'): ""}</span>
                                     
                                 </div>
                             </div>
@@ -211,7 +211,7 @@ function additionalResultTemplate(results,resolved_tags){
 }
 
 function tagButtons(tags,result){
-    const tagSpan = `<ul class="tags-list inline"><li>${(result.result_id=="bulk") ? 'Seleção: ' : ''} <i class="icon icon-tags"></i></li>
+    const tagSpan = `<ul class="tags-list inline"><li>${(result.result_id=="bulk") ? 'Seleç&atilde;o: ' : ''} <i class="icon icon-tags"></i></li>
     ${tags.map(function (tag) {
        
         return `<li>
