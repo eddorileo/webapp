@@ -2,7 +2,7 @@ function notifyListPageTemplate(result){
     
     const page = `
     <h1 class="headline">Notifica&ccedil;&otilde;es</h1>
-    <p class ="subhead sm"> N&acute;s podemos enviar notifica&ccedil;&otilde;es por email quando novos resultados de busca forem encontrados em suas listas.
+    <p class ="subhead sm"> N&oacute;s podemos enviar notifica&ccedil;&otilde;es por email quando novos resultados de busca forem encontrados em suas listas.
     Customize aqui as configura&ccedil;&otilde;es e frequ&ecirc;ncia de suas notifica&ccedil;&otilde;es.
     </p>
   
