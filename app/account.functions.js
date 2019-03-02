@@ -49,7 +49,7 @@ $( document ).ready(function(){
         }
         $("#top_naviation").prepend(
             `<center><p class="subhead sm" style="text-align:center!important">
-                <a href="/list" class="link">Image Lists</a> | 
+                <a href="/list" class="link">Listas de Imagens</a> | 
                 <a href="/manage/account" class="link">Gerenciar Conta</a><BR><BR>
             </p></center>`
         )
