@@ -18,7 +18,7 @@ function registerPartnerTemplate(params){
                   
                 }).join('')}
                 </select><br><BR>
-                Initial package expires in (days)
+				Pacote inicial expira em (dias)                
                 <input id="inital_package_length" type=number placeholder="30" value='0' /><BR>
                 <a href="#" class="btn-medium" id="registerButton">Create User</a>
             </div>

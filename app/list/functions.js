@@ -4,7 +4,7 @@ function renderListPage(params){
     listsPage({monitor_strategy: credits.monitor_strategy,...params})
 }
 function listsPage(params){
-    window.history.pushState(params,"Lists - Infringment Report", "/list?start=0&rows="+params.rows)
+    window.history.pushState(params,"Listas", "/list?start=0&rows="+params.rows)
     apiCall({
         method:'GET',
         endpoint:'/list?start='+params.start+'&rows='+params.rows,
@@ -17,7 +17,7 @@ function listsPage(params){
                 if(Object.keys(result).length == params.rows){
                     // number of returned rows = max page size, show pagination button
                     $("#pagination_container").html(
-                        "<center><a href=\"#\" class=\"btn btn-medium\">Load more lists</a>"
+                        "<center><a href=\"#\" class=\"btn btn-medium\">Carregar mais listas</a>"
                     )
                     $("#pagination_container a").click( function(event) {
                             event.preventDefault()
@@ -31,7 +31,7 @@ function listsPage(params){
                     )
                 }
             }else{
-                handleAPIError({error: "An unknown error occured: The lists object was not an object. Please contact support for more info."})
+                handleAPIError({error: "Ocorreu um erro: Objeto Lista naum era um objeto. Contacte suporte para maiores detalhes."})
             }
 
         }

@@ -1,6 +1,6 @@
 function date_relative(unix_timestamp) {
     if(unix_timestamp == 0){
-        return "Ainda não"
+        return "Ainda n&atilde;o"
     }
     if(unix_timestamp == -1){
         return "Buscando..."
@@ -13,7 +13,7 @@ function date_relative(unix_timestamp) {
 
     var current = new Date()
     var elapsed = current - (unix_timestamp*1000);
-    var suffix = " atrás"
+    var suffix = " atr&aacute;s"
     if(elapsed < 0){
         elapsed = (unix_timestamp*1000) - current
         suffix = ""
@@ -46,7 +46,7 @@ function date_relative(unix_timestamp) {
 
 function date_relative_short(unix_timestamp) {
     if(unix_timestamp == 0){
-        return "Ainda não"
+        return "Ainda n&atilde;o"
     }
     if(unix_timestamp == -1){
         return "Buscando..."
@@ -87,13 +87,13 @@ function date_relative_short(unix_timestamp) {
 }
 function date_absolute(unix_timestamp){
     if(unix_timestamp == 0){
-        return "Ainda não"
+        return "Ainda n&atilde;o"
     }
     if(unix_timestamp == -1){
         return "Buscando..."
     }
     var a = new Date(unix_timestamp * 1000);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var date = a.getDate();
@@ -133,7 +133,7 @@ function dateStringToAtom(date_string,time){
         day = "0"+day
     }
     var ret = {
-        atom: year+'-'+month+'-'+day+'T'+time+'Z',
+        atom: day+'-'+month+'-'+year+'T'+time+'Z',
         day,
         month,
         year

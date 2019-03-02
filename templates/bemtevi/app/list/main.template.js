@@ -1,6 +1,6 @@
 function listsPageTemplate(params){
     const page = `
-    <h1 class="headline">Suas Listas de Busca</h1>
+    <h1 class="headline">Listas de Busca</h1>
 
     <a class="pull-right btn btn-small" href="/list/new">Nova Lista</a>
     <div class="clearfix"></div>
@@ -9,12 +9,12 @@ function listsPageTemplate(params){
             <tr>
                 <td><strong>Lista</strong></td>
                 <td><strong>Imagens</strong></td>
-                <td><strong>Infrações</strong></td> 
+                <td><strong>Infra&ccetil;&otilde;es</strong></td> 
                 ${(params.monitor_strategy === "classic") ? `
-                    <td><strong>Última Pesquisa Realizada</strong></td>
+                    <td><strong>&Uacte;ltima Pesquisa Realizada</strong></td>
                     <td><strong>Monitoramento</strong></td>
                 ` : ``}
-                <td><strong>Ações</strong></td>
+                <td><strong>A&ccedil;&otilde;es</strong></td>
             </tr>
 
         </tbody>
@@ -30,11 +30,11 @@ function listsTableTemplate(params){
         <tr id='listrow${list.list_id}'>
             <td><a href="/list/${list.list_id}/query" class="link">${list.list_label}</a></td>
             <td>
-                In List: ${list.count}<br>
-                With Results: ${((!list.source_images_found) ? "0" : list.source_images_found) }
+                Lista(s): ${list.count}<br>
+                Resultado(s): ${((!list.source_images_found) ? "0" : list.source_images_found) }
             </td>
             <td>
-                ${ ((list["unique_hosts"] == 0) ? "No infringements found" : "Domains: "+((!list.unique_hosts) ? 0 : list.unique_hosts)+"<br> Pages: "+((!list.unique_pages) ? 0 : list.unique_pages))}
+                ${ ((list["unique_hosts"] == 0) ? "No infringements found" : "Dom&iacute;nios: "+((!list.unique_hosts) ? 0 : list.unique_hosts)+"<br> P&aacute;ginas: "+((!list.unique_pages) ? 0 : list.unique_pages))}
             </td>
             ${(params.monitor_strategy === "classic") ? `
             <td id="last_search_td_${list.list_id}">
