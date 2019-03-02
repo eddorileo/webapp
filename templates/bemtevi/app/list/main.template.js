@@ -30,8 +30,8 @@ function listsTableTemplate(params){
         <tr id='listrow${list.list_id}'>
             <td><a href="/list/${list.list_id}/query" class="link">${list.list_label}</a></td>
             <td>
-                Lista(s): ${list.count}<br>
-                Resultado(s): ${((!list.source_images_found) ? "0" : list.source_images_found) }
+                Lista: ${list.count}<br>
+                Resultado: ${((!list.source_images_found) ? "0" : list.source_images_found) }
             </td>
             <td>
                 ${ ((list["unique_hosts"] == 0) ? "No infringements found" : "Dom&iacute;nios: "+((!list.unique_hosts) ? 0 : list.unique_hosts)+"<br> P&aacute;ginas: "+((!list.unique_pages) ? 0 : list.unique_pages))}

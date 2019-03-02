@@ -15,7 +15,7 @@ function manageAccountPageTemplate(params){
 						<h2>Assinaturas</h2>
 					<p >
 						<Strong>${(params.user_info.credits.total.package_labels) ? params.user_info.credits.total.package_labels : "Nenhuma assinatura ativa" }</strong><br>
-						<strong>${params.user_info.credits.total.credits.toLocaleString()}</strong> busca(s) avulsa(s)/mo (<i>${params.user_info.credits.total.remaining.toLocaleString()} restante</i>)<br>
+						<strong>${params.user_info.credits.total.credits.toLocaleString()}</strong> buscas avulsas /m&ecirc;s (<i>${params.user_info.credits.total.remaining.toLocaleString()} restante</i>)<br>
 						<strong>${params.user_info.credits.total.monitor.toLocaleString()}</strong> imagens monitoradas (<i>${params.user_info.credits.total["remaining-monitor"].toLocaleString()} restante</i>)<br>
 						<BR><a href="/manage/subscription" class="btn btn-medium">Gerenciar Assinatura</a>
 					</p>
