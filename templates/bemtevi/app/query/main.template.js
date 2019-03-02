@@ -3,13 +3,13 @@ function queryPageTemplate(result,request,resolved_tags){
     const page = `
         <div class="search-panel-top">
         <h1 class="headline txt-left">${result.list.list_label}</h1>
-            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' images in this list are still queued to be searched. You may get more results if you come back soon.</div>' : "")}
+            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista estão na fila para serem pesquisadas. Você poderá encontrar mais resultados em breve.</div>' : "")}
  
         <div id="chart_div" style="width:100%;overflow:none"></div>
     </div> <!-- search panel top -->
 
     <div id="filters" class="search-panel-filter"></div>
-    <a href="#" id="showAPI" class="link-a pull-right">Show API query</a>
+    <a href="#" id="showAPI" class="link-a pull-right">Mostrar Entrada da Busca</a>
     <input type=text id='apiquery' style='display:none; width:100%' />
     <div class="search-panel-content">
         <div class="row">
@@ -32,8 +32,8 @@ function queryPageTemplate(result,request,resolved_tags){
                             }).join('')
                         }
                                 
-                            <li><a href="#" data-tag_id="untagged" class="tag-select tag tag-default ${(resolved_tags.selected_tag == "untagged") ? "active" : "" } ">Untagged</a></li>
-                            <li><a href="/list/${result.list.list_id}/tag">Edit tags...</a></li>
+                            <li><a href="#" data-tag_id="untagged" class="tag-select tag tag-default ${(resolved_tags.selected_tag == "untagged") ? "active" : "" } ">Sem rótulo</a></li>
+                            <li><a href="/list/${result.list.list_id}/tag">Editar rótulos...</a></li>
                         </ul> <!-- tags list -->
                         
                     </div> <!-- widget -->
@@ -45,7 +45,7 @@ function queryPageTemplate(result,request,resolved_tags){
                 <div class="panel-result-header">
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                        <h5>${result.query_result.ngroups} domains with ${result.query_result.matches} infringements</h5>
+                        <h5>${result.query_result.ngroups} domínios com ${result.query_result.matches} infração</h5>
                     </div> <!-- col -->
 
                     <div class="col-xs-6 col-sm-6 col-md-6 controls txt-sm">
@@ -60,7 +60,7 @@ function queryPageTemplate(result,request,resolved_tags){
                                 ${[15,50,100,500,1000].map(function (opt) {
                           
                                     return `
-                                    <option value="${opt}" ${(opt == request.state.rows) ? "selected" : ""}>${opt} Results Per Page</option>
+                                    <option value="${opt}" ${(opt == request.state.rows) ? "selected" : ""}>${opt} Resultados Por Página</option>
                                     `
                                     
                                 }).join('')}
@@ -68,8 +68,8 @@ function queryPageTemplate(result,request,resolved_tags){
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <select id="use_ignore_listsSelect" class="form-control">
-                                        <option value="true" ${(Boolean(request.state.use_ignore_lists) === true)? "selected" : ""}>Hide Ignored Domains</option>
-                                        <option value="false" ${(Boolean(request.state.use_ignore_lists) === false)? "selected" : ""}>Show Ignored Domains</option>
+                                        <option value="true" ${(Boolean(request.state.use_ignore_lists) === true)? "selected" : ""}>Esconder Domínios Ignorados</option>
+                                        <option value="false" ${(Boolean(request.state.use_ignore_lists) === false)? "selected" : ""}>Mostrar Domínios Ignorados</option>
                             </select>
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
@@ -78,7 +78,7 @@ function queryPageTemplate(result,request,resolved_tags){
                                 ${Object.keys(metrics).map(function(metric){
                                     if(metrics[metric].sortable === true){
                                         return `<option value="${metric} asc" ${(request.state.sort == metric+" asc") ? "selected" : "" }>Sort by ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.asc})</option>
-                                        <option value="${metric} desc" ${(request.state.sort == metric+" desc") ? "selected" : "" }>Sort by ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.desc})</option>`
+                                        <option value="${metric} desc" ${(request.state.sort == metric+" desc") ? "selected" : "" }>Ordenar por ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.desc})</option>`
                                     }
                                 }).join("")}
                                 
@@ -86,7 +86,7 @@ function queryPageTemplate(result,request,resolved_tags){
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <p>
-                                <a href="#" id="applySettings" class="btn btn-normal" style="font-size:1em">Apply Settings</a>
+                                <a href="#" id="applySettings" class="btn btn-normal" style="font-size:1em">Aplicar Configurações</a>
                             </p>
                      
                         </div>
@@ -143,7 +143,7 @@ function queryResultTemplate(result){
                 <span class="meta base-sm-buffer">${main.host} ${(other_matches>0) ? `<span style="color: grey">&plus; ${other_matches} other matches</span>` : ""}</span>
             </div>
             <div class="tag-overlay">
-                <span class="meta base-sm-buffer text-primary-a"><a href="${main.url.substring(0,4)+"://"+main.host}" class="text-primary-a" target=_blank>${main.host}</a> ${(other_matches>0) ? `<a href="#" class="additional_rows link" data-host="${res.groupValue}">&plus; ${other_matches} other matches</a><a href="#" class="additional_rows_alt link" style="display:none" data-host="${res.groupValue}">- hide other matches</a>` : ""} - <a href="#" class="link text-primary-a  ignoreDomain"  data-host="${main.host}">Ignore domain</a> </span>
+                <span class="meta base-sm-buffer text-primary-a"><a href="${main.url.substring(0,4)+"://"+main.host}" class="text-primary-a" target=_blank>${main.host}</a> ${(other_matches>0) ? `<a href="#" class="additional_rows link" data-host="${res.groupValue}">&plus; ${other_matches} other matches</a><a href="#" class="additional_rows_alt link" style="display:none" data-host="${res.groupValue}">- hide other matches</a>` : ""} - <a href="#" class="link text-primary-a  ignoreDomain"  data-host="${main.host}">Ignorar domínio</a> </span>
             </div>
         </div>
 
@@ -156,11 +156,11 @@ function queryResultTemplate(result){
         <p class="base-sm-small-buffer">${(main.description) ? main.description : ""}</p>
         <div class="result-description">
             <div class="result-content">
-                <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+date_relative_short(atomToUnixTimestamp(main.verified_timestamp))+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+date_relative_short(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
                 
             </div>
             <div class="tag-overlay">
-                <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp))+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
                 
             </div>
         </div>
@@ -178,12 +178,12 @@ function additionalResultTemplate(results,resolved_tags){
         if(typeof main == "object"){
             return `<tr>
                     
-                    <td style="width:90px;font-size:0.8em"><span class="meta base-sm-buffer"><small>SOURCE</small></span>
+                    <td style="width:90px;font-size:0.8em"><span class="meta base-sm-buffer"><small>FONTE</small></span>
                     <a href="${main.search_image_url}" target=_blank><img src="/images/bg.png" class="lazyload" data-src="${main.search_image_url_thumbnail}" class="img-responsive" title="Searched (source) image" alt="Searched (source) image" style="width:90px" /></a>
                 </td>
                     <td style="width:150px;font-size:0.8em">
-                    <span class="meta base-sm-buffer"><small>FOUND - ${main.image_width} × ${main.image_height}</small></span>
-                    <a href="${main.image_url}" target=_blank><img src="/images/bg.png" data-src="${main.image_url_thumbnail}" class="img-responsive"  title="Found image" alt="Found image"  style="width:90px" data-found="true" /></a>
+                    <span class="meta base-sm-buffer"><small>ENCONTRADO - ${main.image_width} × ${main.image_height}</small></span>
+                    <a href="${main.image_url}" target=_blank><img src="/images/bg.png" data-src="${main.image_url_thumbnail}" class ="img-responsive"  title="Imagem Encontrada" alt="Imagem Encontrada"  style="width:90px" data-found="true" /></a>
                 </td><td>
                 <a href="${main.url}" target=_blank class="link" style="font-size: 14px;" >${main.title}</a>
                 <span class="meta base-sm-buffer">
@@ -192,11 +192,11 @@ function additionalResultTemplate(results,resolved_tags){
                 </small></span>
                     <div class="result-description">
                                 <div class="result-content">
-                                    <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+date_relative_short(main.verified_timestamp)+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                                    <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${date_relative_short(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+date_relative_short(main.verified_timestamp) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
                     
                                 </div>
                                 <div class="tag-overlay">
-                                    <span class="meta"> ${languageCodeToLanguage(main.language)} - Found: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}. ${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(main.verified_timestamp)+'</i></span>' : '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Image not seen on page"  title="Image not seen on page"> Image not found on page') : ""}</span>
+                                    <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verificado '+dynamicDate(main.verified_timestamp) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem não encontrada na página"  title="Imagem não encontrada na página"> Imagem não encontrada na página'): ""}</span>
                                     
                                 </div>
                             </div>
@@ -211,7 +211,7 @@ function additionalResultTemplate(results,resolved_tags){
 }
 
 function tagButtons(tags,result){
-    const tagSpan = `<ul class="tags-list inline"><li>${(result.result_id=="bulk") ? 'With selected: ' : ''} <i class="icon icon-tags"></i></li>
+    const tagSpan = `<ul class="tags-list inline"><li>${(result.result_id=="bulk") ? 'Seleção: ' : ''} <i class="icon icon-tags"></i></li>
     ${tags.map(function (tag) {
        
         return `<li>

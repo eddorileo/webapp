@@ -1,13 +1,14 @@
 
 function tagPageTemplate(list,tags){
     const page = `
-    <h1 class="headline">Tags</h1>
-    <p class="subhead sm">You can modify the tags which are available. Your account defaults will be used if you do not have a list-specific set of tags.</p>
+    <h1 class="headline">Rótulos</h1>
+    <p class ="subhead sm">Você pode modificar os rótulos que estão disponíveis.
+    Caso contrário, rótulos padrões serão usados.</p>
     
 
     <table class="table subhead sm left">
         <tbody id="mainTagList">
-            <tr><td><strong>Lists</strong></td><td><strong>Tags</strong></td><td><strong>Actions</strong></td></tr>
+            <tr><td><strong>Listas</strong></td><td><strong>Tags</strong></td><td><strong>Ações</strong></td></tr>
         
                     </tbody>
                 </table>
@@ -32,7 +33,7 @@ function tagTableTemplate(lists){
                 ${list.tag_count}
             </td>
             <td>
-                <a href="/list/${list.list_id}/tag"><img alt="Edit Tags" title="Edit Tags" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/></a>            
+                <a href="/list/${list.list_id}/tag"><img alt="Editar Rótulos" title="Edit Tags" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/></a>            
             </td>
         </tr>`
         }).join('')}`

@@ -10,7 +10,7 @@ function registerStage2Template(){
                 <span class="qq-upload-drop-area-text-selector"></span>
             </div>
             <div class="qq-upload-button-selector qq-upload-button">
-                <div style="font-size: 1.6em;">Upload files</div>
+                <div style="font-size: 1.6em;">Subir arquivos</div>
             </div>
             <span class="qq-drop-processing-selector qq-drop-processing">
                 <span>Processing dropped files...</span>
@@ -28,25 +28,25 @@ function registerStage2Template(){
                     </div>
                     <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
                     <button type="button" class="qq-upload-retry-selector qq-upload-retry">
-                        <span class="qq-btn qq-retry-icon" aria-label="Retry"></span>
+                        <span class="qq-btn qq-retry-icon" aria-label="Tentar novamente"></span>
                         Retry
                     </button>
 
                     <div class="qq-file-info">
                         <div class="qq-file-name">
                             <span class="qq-upload-file-selector qq-upload-file"></span>
-                            <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+                            <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Editar arquivo"></span>
                         </div>
                         <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
                         <span class="qq-upload-size-selector qq-upload-size"></span>
                         <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
-                            <span class="qq-btn qq-delete-icon" aria-label="Delete"></span>
+                            <span class="qq-btn qq-delete-icon" aria-label="Deletar"></span>
                         </button>
                         <button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
-                            <span class="qq-btn qq-pause-icon" aria-label="Pause"></span>
+                            <span class="qq-btn qq-pause-icon" aria-label="Pausa"></span>
                         </button>
                         <button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
-                            <span class="qq-btn qq-continue-icon" aria-label="Continue"></span>
+                            <span class="qq-btn qq-continue-icon" aria-label="Continuar"></span>
                         </button>
                     </div>
                 </li>
@@ -55,15 +55,15 @@ function registerStage2Template(){
             <dialog class="qq-alert-dialog-selector">
                 <div class="qq-dialog-message-selector"></div>
                 <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">Close</button>
+                    <button type="button" class="qq-cancel-button-selector">Fechar</button>
                 </div>
             </dialog>
 
             <dialog class="qq-confirm-dialog-selector">
                 <div class="qq-dialog-message-selector"></div>
                 <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">No</button>
-                    <button type="button" class="qq-ok-button-selector">Yes</button>
+                    <button type="button" class="qq-cancel-button-selector">Não</button>
+                    <button type="button" class="qq-ok-button-selector">Sim</button>
                 </div>
             </dialog>
 
@@ -71,22 +71,22 @@ function registerStage2Template(){
                 <div class="qq-dialog-message-selector"></div>
                 <input type="text">
                 <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">Cancel</button>
+                    <button type="button" class="qq-cancel-button-selector">Cancelar</button>
                     <button type="button" class="qq-ok-button-selector">Ok</button>
                 </div>
             </dialog>
         </div>
     </script>
-    <h1 class="headline base-sm-medium-buffer">Create new account</h1>
+    <h1 class="headline base-sm-medium-buffer">Criar nova conta</h1>
     <fieldset>
         <div class="row login-form">
             <div class="col-sm-2 col-md-2"></div>
             <div class="col-sm-8 col-md-8">
-                <h2><a href="/login" class="link">Login</a> | Register</h2>
-                <h2>Upload up to three images to start your trial</h2><br>
-                <a class="link sm subhead" id="registerStage2Link" href="#">Don\'t want to upload images yet? Check your email for login details.</a><br>
+                <h2><a href="/login" class="link">Logar</a> | Registrar</h2>
+                <h2>Upload até 3 imagens para começar seu teste</h2><br>
+                <a class="link sm subhead" id="registerStage2Link" href="#">Não quer carregar imagens agora? Cheque o seu email para os detalhes do login.</a><br>
                 <div><div id="fine-uploader-gallery" style="height:330px"></div></div><BR>
-                <a class="btn btn-normal" id="registerStage2Submit" href="#" >Next ></a>
+                <a class="btn btn-normal" id="registerStage2Submit" href="#" >Próximo ></a>
             </div>
             <div class="col-sm-2 col-md-2"></div>
         </div>

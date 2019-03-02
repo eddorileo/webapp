@@ -1,10 +1,10 @@
 function partnerListPageTemplate(result){
 
     const page = `
-    <h1 class="headline">Your Users</h1>
-    <a class="pull-right btn btn-small" href="/partner/new">New User</a>
+    <h1 class="headline">Seus Usuários</h1>
+    <a class="pull-right btn btn-small" href="/partner/new">Novo Usuário</a>
     <p>
-        Filter: <a href="/partner/list?active=users">All Users</a> | <a href="/partner/list?active=activeUsers">Active Users</a>
+        Filter: <a href="/partner/list?active=users">Todos Usuários</a> | <a href="/partner/list?active=activeUsers">Usuários Ativos</a>
     </p>
     <div class="clearfix"></div>
     <table class="table subhead sm left"  style="width:100%!important">
@@ -12,12 +12,12 @@ function partnerListPageTemplate(result){
             <tr>
                 <td><strong>Email</strong></td>
                 <td><strong>ID</strong></td>
-                <td><strong>Package</strong></td>
-                <td><strong>Allowed</strong></td> 
-                <td><strong>Monitored</strong></td>
-                <td><strong>Subscription Expiry</strong></td>
-                <td><strong>Enabled</strong></td>
-                <td><strong>Actions</strong></td>
+                <td><strong>Pacote</strong></td>
+                <td><strong>Permitido</strong></td> 
+                <td><strong>Monitorados</strong></td>
+                <td><strong>Expiração da Assinatura</strong></td>
+                <td><strong>Habilitado</strong></td>
+                <td><strong>Ações</strong></td>
             </tr>
             ${result.users.map(function (user) {
                 return `

@@ -1,20 +1,20 @@
 function listsPageTemplate(params){
     const page = `
-    <h1 class="headline">Your search lists</h1>
+    <h1 class="headline">Suas Listas de Busca</h1>
 
-    <a class="pull-right btn btn-small" href="/list/new">New List</a>
+    <a class="pull-right btn btn-small" href="/list/new">Nova Lista</a>
     <div class="clearfix"></div>
     <table class="table subhead sm left"  style="width:100%!important">
         <tbody id="listInfoContainer">
             <tr>
-                <td><strong>List</strong></td>
-                <td><strong>Images</strong></td>
-                <td><strong>Infringements</strong></td> 
+                <td><strong>Lista</strong></td>
+                <td><strong>Imagens</strong></td>
+                <td><strong>Infrações</strong></td> 
                 ${(params.monitor_strategy === "classic") ? `
-                    <td><strong>Last Search Complete</strong></td>
-                    <td><strong>Monitoring</strong></td>
+                    <td><strong>Última Pesquisa Realizada</strong></td>
+                    <td><strong>Monitoramento</strong></td>
                 ` : ``}
-                <td><strong>Actions</strong></td>
+                <td><strong>Ações</strong></td>
             </tr>
 
         </tbody>
@@ -60,8 +60,8 @@ function listsTableTemplate(params){
                 <a href="/list/${list.list_id}/edit">
                     <img alt="Edit List" title="Edit List" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/>
                 </a> 
-                <a href="javascript: void(0)" onclick="apiCall({method:'DELETE',endpoint:'/list/${list.list_id}',precheck:'Are you sure that you want to delete this list?',postAction:{action:'hide',e:document.getElementById('listrow${list.list_id}')}});">
-                    <img alt="Delete List" title="Delete List" src="https://png.icons8.com/windows/24/7f8c8d/trash.png"/>
+                <a href="javascript: void(0)" onclick="apiCall({method:'DELETE',endpoint:'/list/${list.list_id}',precheck:'Você tem certeza de que deseja deletar esta lista?',postAction:{action:'hide',e:document.getElementById('listrow${list.list_id}')}});">
+                    <img alt="Deletar Lista" title="Deletar Lista" src="https://png.icons8.com/windows/24/7f8c8d/trash.png"/>
                 </a>
                 
             </td>

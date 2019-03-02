@@ -2,22 +2,22 @@
 
 function casesListPageTemplate(cases){
     const page = `
-    <h1 class="headline">Your search lists</h1>
+    <h1 class="headline">Sua Lista de Buscas</h1>
 
-    <a class="pull-right btn btn-small" href="/list/new">New List</a>
+    <a class="pull-right btn btn-small" href="/list/new">Nova Lista</a>
     <div class="clearfix"></div>
     <table class="table subhead sm left"  style="width:100%!important">
         <tbody id="listInfoContainer">
             <tr>
-                <td><strong>Case ID</strong></td>
-                <td><strong>Searched Image</strong></td> 
-                <td><strong>Infringing Image</strong></td> 
-                <td><strong>Infringing Page</strong></td> 
-                <td><strong>Result Dates</strong></td> 
-                <td><strong>User Status</strong></td> 
+                <td><strong>ID</strong></td>
+                <td><strong>Imagem Buscada</strong></td> 
+                <td><strong>Imagem Infratora</strong></td> 
+                <td><strong>Página Infratora</strong></td> 
+                <td><strong>Datas do Resultado</strong></td> 
+                <td><strong>Status do Usuário</strong></td> 
                 <td><strong>Parent Status</strong></td>
-                <td><strong>Case Dates</strong></td>
-                <td><strong>Actions</strong></td>
+                <td><strong>Datas dos Casos</strong></td>
+                <td><strong>Ações</strong></td>
             </tr>
             ${cases.map(function (cased) {
                 return `

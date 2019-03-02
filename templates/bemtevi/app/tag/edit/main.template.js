@@ -1,10 +1,10 @@
 
 function tagPageTemplate(list,tags){
     const page = `
-    <h1 class="headline">${list.list_label} Tags</h1>
+    <h1 class="headline">${list.list_label} Rótulos</h1>
 
-    ${((list.list_id > 0) ? "<center><a href=\"/list/"+list.list_id+"/edit\" class=\"subhead sm link\">Back to list settings</a> -- <a href=\"/list/0/tag\" class=\"subhead sm link\">Account Tags</a></center>" : "")}
-    <a class="pull-right btn btn-small" href="#" id="newTagButton">New Tag</a> <div class="clearfix"></div>
+    ${((list.list_id > 0) ? "<center><a href=\"/list/"+list.list_id+"/edit\" class=\"subhead sm link\">Voltar para lista de configurações</a> -- <a href=\"/list/0/tag\" class=\"subhead sm link\">Rótulos da Conta</a></center>" : "")}
+    <a class="pull-right btn btn-small" href="#" id="newTagButton">Novo Rótulo</a> <div class="clearfix"></div>
         
         <div class="row">
             <div class="col-md-1"></div>
@@ -12,16 +12,16 @@ function tagPageTemplate(list,tags){
                 <table class='table subhead sm left' style="width:100%!important">
                     <tbody id='tagtable' >
                         <tr>
-                            <td><strong>Tag</strong></td>
-                            <td><strong>Color</strong></td>
-                            <td><strong>Mapped to</strong></td>
-                            <td><strong>State</strong></td>
+                            <td><strong>Rótulo</strong></td>
+                            <td><strong>Cor</strong></td>
+                            <td><strong>Mapeado para</strong></td>
+                            <td><strong>Estado</strong></td>
                             <td></td>
                         </tr>
         
                     </tbody>
                 </table>
-            ${((tags.length === 0 && list.list_id != 0) ? "<p>You don't have any custom tags, we'll use your account defaults, or the Infringement.Report defaults. <a href=\"#\" onclick=\"newTag(); return false;\" class=\"link\">Add a new tag</a> </p>" :  "<a class=\"sm link pull-right\" href=\"#\" onclick=\"showDefaultTags(); return false;\">Restore Defaults</a>" ) }     
+            ${((tags.length === 0 && list.list_id != 0) ? "<p>Você não possui nenhum rótulo customizado. Rótulo padrão será usado. <a href=\"#\" onclick=\"newTag(); return false;\" class=\"link\">Adicionar novo rótulo</a> </p>": "<a class=\"sm link pull-right\" href=\"#\" onclick=\"showDefaultTags(); return false;\">Restaurar Padrão</a>")}
             </div>
 
             
@@ -47,11 +47,11 @@ function tagTableTemplate(tags){
             ${((tag.alias_of) ? tag.alias_of : "")}
         </td>
         <td>
-            <select data-tag_id="${tag.tag_id}" class="listStateField"><option value="live" ${((tag.state=="live")? "selected" : "")}>Live</option><option ${((tag.state=="hidden")? "selected" : "")} value="hidden">Hidden</option></select>
+            <select data-tag_id="${tag.tag_id}" class="listStateField"><option value="live" ${((tag.state=="live")? "selected" : "")}>Online</option><option ${((tag.state=="hidden")? "selected" : "")} value="hidden">Ocultar</option></select>
         </td>
         <td>
 
-            <a href="#" class="deleteTag" data-tag_id="${tag.tag_id}"><img alt="Delete List" data-tag_id="${tag.tag_id}" title="Delete List" src="https://png.icons8.com/windows/24/7f8c8d/trash.png"/></a>         
+            <a href="#" class="deleteTag" data-tag_id="${tag.tag_id}"><img alt="Deletar Lista" data-tag_id="${tag.tag_id}" title="Deletar Lista" src="https://png.icons8.com/windows/24/7f8c8d/trash.png"/></a>         
         </td>
     </tr>`
     }).join('')}`

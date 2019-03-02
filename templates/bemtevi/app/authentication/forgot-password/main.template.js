@@ -1,6 +1,6 @@
 function forgotPassTemplate(){
     const page = `
-    <h1 class="headline base-sm-medium-buffer">Reset password</h1>
+    <h1 class="headline base-sm-medium-buffer">Resetar senha</h1>
 
     
         <fieldset>
