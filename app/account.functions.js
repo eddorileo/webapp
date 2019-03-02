@@ -40,17 +40,17 @@ $( document ).ready(function(){
     var logged = loggedIn().status
     if(logged === true){
         $("#topRightLink").html(
-            `<li><a href="/logout">Log out</a></li>`
+            `<li><a href="/logout">Desconectar</a></li>`
         )
         if(localStorage.is_partner == "true" || localStorage.partner_initial_apikey){
             $("#topRightLink").append(
-                `<a href="/partner?active=activeUsers" class="link">Partners</a>`
+                `<a href="/partner?active=activeUsers" class="link">Parceiros</a>`
             )
         }
         $("#top_naviation").prepend(
             `<center><p class="subhead sm" style="text-align:center!important">
                 <a href="/list" class="link">Image Lists</a> | 
-                <a href="/manage/account" class="link">Manage Account</a><BR><BR>
+                <a href="/manage/account" class="link">Gerenciar Conta</a><BR><BR>
             </p></center>`
         )
         if(localStorage.credits){
@@ -58,12 +58,12 @@ $( document ).ready(function(){
             if(Object.keys(credits).length > 0){
                 if(credits.active && credits.active.length > 0 && credits.active[0].package_id == 1){
                     $("#top_naviation").prepend(
-                        '<div id="loginmessage" class="alert alert-success" role="alert"><center><p style="margin-bottom:0px">Your Infringement.Report trial expires in '+Math.round((credits.active[0].expiry_time-Math.round(new Date().getTime() / 1000))/60/60/24,0)+' days - <a href="/manage/subscription"><u>manage your subscription</u></a>.<br>What would make Infringement.Report better? Let us know at <a href="mailto:hello@infringement.report">hello@infringement.report</a></p></center></div>'
+                        '<div id="loginmessage" class="alert alert-success" role="alert"><center><p style="margin-bottom:0px">Seu período de testes expira em '+Math.round((credits.active[0].expiry_time-Math.round(new Date().getTime() / 1000))/60/60/24,0)+' dias - <a href="/manage/subscription"><u>atualize sua assinatura</u></a>.<br>O que faria BuscaLogo melhor? Fale conosco em <a href="mailto:dorileo@gmail.com">dorileo@gmail.com</a></p></center></div>'
                     )
                 }
                 if( !credits.active || credits.active.length == 0){
                     $("#top_naviation").prepend(
-                        '<div id="loginmessage" class="alert alert-danger" role="alert"><center><p style="margin-bottom:0px">You have no active subscription. All of your lists and data will be deleted within seven days. <a href="/manage/subscription"><u>Add a new package to your account</u></a></p></center></div>'
+                        '<div id="loginmessage" class="alert alert-danger" role="alert"><center><p style="margin-bottom:0px">Vocë náo tem assinatura ativa. Todas as suas listas e dados serão apagados em 07 dias. <a href="/manage/subscription"><u>Adicionar novo pacote para sua conta</u></a></p></center></div>'
                     )
                 }
             }
@@ -71,7 +71,7 @@ $( document ).ready(function(){
 
     }else{
         $("#topRightLink").html(
-            `<a href="/login">Login / register</a>`
+            `<a href="/login">Logar / Registrar</a>`
         )
     }
 

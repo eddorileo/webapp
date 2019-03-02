@@ -94,10 +94,10 @@ function apiCall(obj){
                     handleAPIError(jqXHR.responseJSON,obj)
                 break; 
                 case 423:
-                    handleAPIError({error: "Your account is not enabled and requires further verification. Please contact support for further assistance."},{apikey: x_api_key})
+                    handleAPIError({error: "Sua conta não está habilitada e requer verificação adicional. Favor contactar suporte para obter assistência."},{apikey: x_api_key})
                 break;
                 default:
-                    handleAPIError({error: "This operation could not be completed because the server was unreachable."},{apikey: x_api_key})
+                    handleAPIError({error: "Esta operação não pode ser completada porque o servidor estava indisponível."},{apikey: x_api_key})
             }
            
         });
@@ -107,7 +107,7 @@ function apiCall(obj){
 function handleAPIError(data,obj){
     document.getElementById("messagebar").className = "alert alert-danger"
     if(!data.error){
-        data.error = "This operation could not be completed because an unknown error has occurred."
+        data.error = "Esta operação não pode ser completada por que aconteceu um erro desconhecido."
     }
     $("#messagebar").html("<p>"+data.error+"</p>")
     if(Rollbar){

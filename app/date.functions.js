@@ -1,9 +1,9 @@
 function date_relative(unix_timestamp) {
     if(unix_timestamp == 0){
-        return "Not yet"
+        return "Ainda não"
     }
     if(unix_timestamp == -1){
-        return "Searching..."
+        return "Buscando..."
     }
     var msPerMinute = 60 * 1000;
     var msPerHour = msPerMinute * 60;
@@ -13,43 +13,43 @@ function date_relative(unix_timestamp) {
 
     var current = new Date()
     var elapsed = current - (unix_timestamp*1000);
-    var suffix = " ago"
+    var suffix = " atrás"
     if(elapsed < 0){
         elapsed = (unix_timestamp*1000) - current
         suffix = ""
     }
 
     if (elapsed < msPerMinute) {
-         return Math.round(elapsed/1000) + ' seconds'+suffix;   
+         return Math.round(elapsed/1000) + ' segundos'+suffix;   
     }
 
     else if (elapsed < msPerHour) {
-         return Math.round(elapsed/msPerMinute) + ' minutes'+suffix;   
+         return Math.round(elapsed/msPerMinute) + ' minutos'+suffix;   
     }
 
     else if (elapsed < msPerDay ) {
-         return Math.round(elapsed/msPerHour ) + ' hours'+suffix;   
+         return Math.round(elapsed/msPerHour ) + ' horas'+suffix;   
     }
 
     else if (elapsed < msPerMonth) {
-        return Math.round(elapsed/msPerDay) + ' days'+suffix;   
+        return Math.round(elapsed/msPerDay) + ' dias'+suffix;   
     }
 
     else if (elapsed < msPerYear) {
-        return Math.round(elapsed/msPerMonth) + ' months'+suffix;   
+        return Math.round(elapsed/msPerMonth) + ' meses'+suffix;   
     }
 
     else {
-        return Math.round(elapsed/msPerYear ) + ' years'+suffix;   
+        return Math.round(elapsed/msPerYear ) + ' anos'+suffix;   
     }
 }
 
 function date_relative_short(unix_timestamp) {
     if(unix_timestamp == 0){
-        return "Not yet"
+        return "Ainda não"
     }
     if(unix_timestamp == -1){
-        return "Searching..."
+        return "Buscando..."
     }
     var msPerMinute = 60 * 1000;
     var msPerHour = msPerMinute * 60;
@@ -87,10 +87,10 @@ function date_relative_short(unix_timestamp) {
 }
 function date_absolute(unix_timestamp){
     if(unix_timestamp == 0){
-        return "Not yet"
+        return "Ainda não"
     }
     if(unix_timestamp == -1){
-        return "Searching..."
+        return "Buscando..."
     }
     var a = new Date(unix_timestamp * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
