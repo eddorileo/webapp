@@ -9,9 +9,9 @@ function listsPageTemplate(params){
             <tr>
                 <td><strong>Lista</strong></td>
                 <td><strong>Imagens</strong></td>
-                <td><strong>Infra&ccetil;&otilde;es</strong></td> 
+                <td><strong>Infra&ccedil;&otilde;es</strong></td> 
                 ${(params.monitor_strategy === "classic") ? `
-                    <td><strong>&Uacte;ltima Pesquisa Realizada</strong></td>
+                    <td><strong>&Uacute;ltima Pesquisa Realizada</strong></td>
                     <td><strong>Monitoramento</strong></td>
                 ` : ``}
                 <td><strong>A&ccedil;&otilde;es</strong></td>
