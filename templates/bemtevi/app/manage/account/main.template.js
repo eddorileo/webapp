@@ -46,7 +46,7 @@ function manageAccountPageTemplate(params){
                         
                         <input type="password" name="confirm_password" placeholder="Repetir Nova Senha" class="max base-sm-buffer"  />
                         
-                        <a href="#" class="btn btn-medium" id="changePassword">Salvar Endere&ccedil;o</a>
+                        <a href="#" class="btn btn-medium" id="changePassword">Salvar</a>
                     </fieldset>
 				</div>
 				<div class="col-md-6">
@@ -56,8 +56,8 @@ function manageAccountPageTemplate(params){
                         <span class="para base-sm-large-buffer">Estas informa&ccedil;&otilde;es constar&atilde;o nos recibos de pagamento</span>
 
 						<input type=text name='address[name]' class='max base-sm-medium-buffer' placeholder='Nome da Empresa' value="${params.user_info.address.name}"><br>
-						<input type=text name='address[line1]' class='max base-sm-medium-buffer' placeholder='Endereço linha 1' value="${params.user_info.address.line1}"><br>
-						<input type=text name='address[line2]' class='max base-sm-medium-buffer' placeholder='Endereço linha 2' value="${params.user_info.address.line2}"><br>
+						<input type=text name='address[line1]' class='max base-sm-medium-buffer' placeholder='Endere&ccedil;o linha 1' value="${params.user_info.address.line1}"><br>
+						<input type=text name='address[line2]' class='max base-sm-medium-buffer' placeholder='Endere&ccedil;o linha 2' value="${params.user_info.address.line2}"><br>
 						<input type=text name='address[city]' class='max base-sm-medium-buffer' placeholder='Cidade' value="${params.user_info.address.city}"><br>
 						<input type=text name='address[postcode]' class='max base-sm-medium-buffer' placeholder='CEP' value="${params.user_info.address.postcode}"><br>
                         <select name='address[country]' class="form-control" style="width:100%"><option value="">Selecionar Pa&iacute;s</option> 

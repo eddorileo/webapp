@@ -60,7 +60,7 @@ function listsTableTemplate(params){
                 <a href="/list/${list.list_id}/edit">
                     <img alt="Edit List" title="Edit List" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/>
                 </a> 
-                <a href="javascript: void(0)" onclick="apiCall({method:'DELETE',endpoint:'/list/${list.list_id}',precheck:'Você tem certeza de que deseja deletar esta lista?',postAction:{action:'hide',e:document.getElementById('listrow${list.list_id}')}});">
+                <a href="javascript: void(0)" onclick="apiCall({method:'DELETE',endpoint:'/list/${list.list_id}',precheck:'Voc&ecirc; tem certeza de que deseja deletar esta lista?',postAction:{action:'hide',e:document.getElementById('listrow${list.list_id}')}});">
                     <img alt="Deletar Lista" title="Deletar Lista" src="https://png.icons8.com/windows/24/7f8c8d/trash.png"/>
                 </a>
                 
