@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="pt">
 
 <head>
     
@@ -9,11 +9,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     
     <title><?php if(isset($GLOBALS["content"]["title"])){
-		echo $GLOBALS["content"]["title"] . " | Infringement.Report";
+		echo $GLOBALS["content"]["title"] . " | Buscalogo";
 	}elseif(isset($GLOBALS["content"]["heading"])){
-		echo $GLOBALS["content"]["heading"] . " | Infringement.Report";
+		echo $GLOBALS["content"]["heading"] . " | Buscalogo";
 	}else{
-		echo "Infringement.Report";
+		echo "Buscalogo";
 	} ?></title>
 	<?php
 	if(isset($GLOBALS["content"]["robots"])){
@@ -23,7 +23,7 @@
 		echo '<meta name="description" content="'.$GLOBALS["content"]["description"].'">';
 	}
 	if(isset($GLOBALS["content"]["canonical"])){
-		echo '<link rel="canonical" href="https://app.infringement.report'.$GLOBALS["content"]["canonical"].'">';
+		echo '<link rel="canonical" href="https://buscalogo.herokuapp.com'.$GLOBALS["content"]["canonical"].'">';
 	}
 	?>
     
@@ -42,7 +42,7 @@
         if(!window.infringementreport){
             window.infringementreport = {}
         }
-        window.infringementreport.environment = "<?php if($_SERVER["HTTP_HOST"] == "staging.infringement.report"){
+        window.infringementreport.environment = "<?php if($_SERVER["HTTP_HOST"] == "staging.buscalogo"){
                     echo "staging";
                 }else{ 
                     echo "production";
@@ -75,22 +75,22 @@
         <ul>
             <li><a href="#" class="icon icon-menu-close"></a></li>
 
-            <li><a href="/">Home</a></li>
+            <li><a href="/">In&iacute;cio</a></li>
 
-            <li><a href="/list">Image Lists</a></li>
-            <li><a href="/manage-account">Manage Account</a></li>
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/list">Listas de Imagens</a></li>
+            <li><a href="/manage-account">Gerenciar Conta</a></li>
+            <li><a href="/logout">Desconectar</a></li>
             
             
-            <li><a href="https://infringement.report/developers/">API Documentation</a></li>
-            <li><a href="https://infringement.report/contact/">Contact Us</a></li>
+            <!--  <li><a href="https://infringement.report/developers/">API Documentation</a></li> -->
+            <li><a href="https://buscalogo/contact/">Contato</a></li> -->
         </ul>
 
     </nav> <!-- END PRIMARY MENU -->
     
     
     <div id="navbar-brand">
-        <a href="/"><img src="<?php echo template_path(true); ?>/images/infringementreport.png" alt="Infringement.Report" title="Infringement.Report" class="responsive" /></a>
+        <a href="/"><img src="<?php echo template_path(true); ?>/images/buscalogo.jpg" alt="Buscalogo" title="Buscalogo" class="responsive" /></a>
     </div> <!-- END NAVBAR BRAND -->
         
     
@@ -113,8 +113,8 @@
 <noscript>
     <div class="alert alert-danger">
         <center>
-            <h1>This app requires Javascript to function correctly</h1>
-            <p>It is unlikely that Infringement.Report will work with your current settings. Please enable Javascript to continue using this app.</p>
+            <h1>Esta aplicação requer Javascript para funcionar corretamente</h1>
+            <p>Provavelmente Buscalogo não funcionará com sua configuração atual. Por favor, ative Javascript antes de prosseguir.</p>
         </center>
     </div>
 </noscript>
