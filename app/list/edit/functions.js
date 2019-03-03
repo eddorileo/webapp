@@ -179,7 +179,7 @@ function drawImages(images){
                     </span>
                     <span>
                         <p><strong>&Uacute;ltima fila:</strong> `+dynamicDate(i.last_search_start)+`<br>
-                        <strong>&Uacute;ltima busca: < /strong> `+dynamicDate(i.last_search_complete)+`<BR>
+                        <strong>&Uacute;ltima busca: </strong> `+dynamicDate(i.last_search_complete)+`<BR>
                         </p> 
                     </span>
                 </div>`
