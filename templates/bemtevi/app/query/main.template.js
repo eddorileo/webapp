@@ -77,8 +77,8 @@ function queryPageTemplate(result,request,resolved_tags){
 
                                 ${Object.keys(metrics).map(function(metric){
                                     if(metrics[metric].sortable === true){
-                                        return `<option value="${metric} asc" ${(request.state.sort == metric+" asc") ? "selected" : "" }>Ordenar por ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.asc})</option>
-                                        <option value="${metric} desc" ${(request.state.sort == metric+" desc") ? "selected" : "" }>Ordenar por ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.desc})</option>`
+                                        return `<option value="${metric} asc" ${(request.state.sort == metric+" asc") ? "selected" : "" }>Ordenar p/ ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.asc}) </option>
+                                        <option value="${metric} desc" ${(request.state.sort == metric+" desc") ? "selected" : "" }>Ordenar p/ ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.desc}) </option>`
                                     }
                                 }).join("")}
                                 
