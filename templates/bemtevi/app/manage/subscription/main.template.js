@@ -19,7 +19,7 @@ function manageSubscriptionPageTemplate(params){
                     <h2>Modificar Assinatura</h2>
 
                     <fieldset class="base-lg-small-buffer">
-                        <legend class="normal">Sua resid&ecirc;ncia fiscal</legend><p>`
+                        <legend class="normal"></legend><p>`
                         switch (params.user_info.vat_status){
 								case 0:
 									page += "";
@@ -87,7 +87,7 @@ function manageSubscriptionPageTemplate(params){
                             : ""	
                         }
 							
-						<h5>Cartões</h5><p>
+						<h5>Cart&otilde;es</h5><p>
 						Seu cart&atilde;o padr&atilde;o ser&aacute; cobrado quando sua assinatura estiver para ser renovada.<BR>
 						<ul id="cardList" style="font-size:1.4em">
 
