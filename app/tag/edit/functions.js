@@ -56,7 +56,7 @@ function getListTags(list_id){
             $("#newTagButton").click(function(event) {
                 $('#tagtable').append(tagTableTemplate([{
                     tag_id: "new",
-                    tag_label: "Novo R&oacute;tulo",
+                    tag_label: "Nome rótulo",
                     "colour": "ffffff",
                     "state": "live"
                 }]))
@@ -64,7 +64,7 @@ function getListTags(list_id){
                     method:'POST',
                     endpoint:'/list/'+list_id+'/tag',
                     body: {
-                        tag_label: "Novo R&oacute;tulo",
+                        tag_label: "Nome rótulo",
                         "colour": getRandomColor(),
                         "state": "live"
                     },
