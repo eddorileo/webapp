@@ -6,11 +6,11 @@
   <div class="main">
     <div class="table">
       <div class="cell">
-        <a href="#"><img src="<?php echo template_path(true); ?>/images/infringementreport.png" alt="Infringement.Report" class="img-responsive" /></a>
+        <a href="#"><img src="<?php echo template_path(true); ?>/images/buscalogo.jpg" alt="Buscalogo" class="img-responsive" /></a>
       </div> <!-- cell -->
 
       <div class="cell">
-        &copy; 2017 Infringement.Report. Data is provided as-is from public sources. We can not guarantee its accuracy.
+        &copy; 2019 Buscalogo. Dados disponibilizados sem alteração a partir de fontes públicas. Acurácia não garantida.
       </div> <!-- cell -->      
     </div> <!-- table -->
   </div> <!-- main -->
