@@ -82,7 +82,7 @@
             <li><a href="/logout">Desconectar</a></li>
             
             
-            <!--  <li><a href="https://infringement.report/developers/">API Documentation</a></li> 
+            <!--  <li><a href="https://infringement.report/developers/">API Documentation</a></li> -->
             <li><a href="https://buscalogo/contact/">Contato</a></li> -->
         </ul>
 
