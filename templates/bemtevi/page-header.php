@@ -75,10 +75,10 @@
         <ul>
             <li><a href="#" class="icon icon-menu-close"></a></li>
 
-            <li><a href="/">Home</a></li>
+            <li><a href="/">In&iacute;cio</a></li>
 
             <li><a href="/list">Listas de Imagens</a></li>
-            <li><a href="/manage-account">Painel de Controle</a></li>
+            <li><a href="/manage-account">Gerenciar Conta</a></li>
             <li><a href="/logout">Desconectar</a></li>
             
             

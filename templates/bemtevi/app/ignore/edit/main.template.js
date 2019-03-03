@@ -7,7 +7,7 @@ function ignoreEditPageTemplate(result){
         <div class="row">
         <div class="col-md-1"></div>
             <div class="col-md-5">
-        <strong class="subhead sm">Add domains to ignore</strong><br>
+        <strong class="subhead sm">Adicione dom&iacute;nios para serem ignorados</strong><br>
 
         <textarea id="lsv_domains" placeholder="Domínimos (um por linha)\nUse * como caracter coringa, e.g., paginasamarelas.* ou *valsa*.com" class="form-control" style="width:100%;height: 270px;" ></textarea><br>
         <a href="#" id="addLsvDomainsButton" class="btn btn-mid pull-right">Adicionar domínimos ignorados</a>
