@@ -4,7 +4,7 @@ function tagPageTemplate(list,tags){
     <h1 class="headline">${list.list_label} R&oacute;tulos</h1>
 
     ${((list.list_id > 0) ? "<center><a href=\"/list/"+list.list_id+"/edit\" class=\"subhead sm link\">Voltar para lista de configura&ccedil;&otilde;es</a> -- <a href=\"/list/0/tag\" class=\"subhead sm link\">R&oacute;tulos da Conta</a></center>" : "")}
-    <a class="pull-right btn btn-small" href="#" id="newTagButton">Novo R&oacute;tulo</a> <div class="clearfix"></div>
+    <a class="pull-right btn btn-small" href="#" id="newTagButton">Criar Novo</a> <div class="clearfix"></div>
         
         <div class="row">
             <div class="col-md-1"></div>
