@@ -9,7 +9,7 @@ function queryPageTemplate(result,request,resolved_tags){
     </div> <!-- search panel top -->
 
     <div id="filters" class="search-panel-filter"></div>
-    <a href="#" id="showAPI" class="link-a pull-right">Mostrar Entrada da Busca</a>
+    <a href="#" id="showAPI" class="link-a pull-right">Ver chave de busca</a>
     <input type=text id='apiquery' style='display:none; width:100%' />
     <div class="search-panel-content">
         <div class="row">
@@ -60,7 +60,7 @@ function queryPageTemplate(result,request,resolved_tags){
                                 ${[15,50,100,500,1000].map(function (opt) {
                           
                                     return `
-                                    <option value="${opt}" ${(opt == request.state.rows) ? "selected" : ""}>${opt} Resultados Por P&aacute;gina</option>
+                                    <option value="${opt}" ${(opt == request.state.rows) ? "selected" : ""}>${opt} Resultados/P&aacute;gina</option>
                                     `
                                     
                                 }).join('')}
@@ -68,8 +68,8 @@ function queryPageTemplate(result,request,resolved_tags){
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <select id="use_ignore_listsSelect" class="form-control">
-                                        <option value="true" ${(Boolean(request.state.use_ignore_lists) === true)? "selected" : ""}>Esconder Domínios Ignorados</option>
-                                        <option value="false" ${(Boolean(request.state.use_ignore_lists) === false)? "selected" : ""}>Mostrar Domínios Ignorados</option>
+                                        <option value="true" ${(Boolean(request.state.use_ignore_lists) === true)? "selected" : ""}>Esconder Ignorados</option>
+                                        <option value="false" ${(Boolean(request.state.use_ignore_lists) === false)? "selected" : ""}>Mostrar Ignorados</option>
                             </select>
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
@@ -77,7 +77,7 @@ function queryPageTemplate(result,request,resolved_tags){
 
                                 ${Object.keys(metrics).map(function(metric){
                                     if(metrics[metric].sortable === true){
-                                        return `<option value="${metric} asc" ${(request.state.sort == metric+" asc") ? "selected" : "" }>Sort by ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.asc})</option>
+                                        return `<option value="${metric} asc" ${(request.state.sort == metric+" asc") ? "selected" : "" }>Ordenar por ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.asc})</option>
                                         <option value="${metric} desc" ${(request.state.sort == metric+" desc") ? "selected" : "" }>Ordenar por ${metrics[metric].label} (${metric_types[metrics[metric].type].sort.desc})</option>`
                                     }
                                 }).join("")}
@@ -148,9 +148,9 @@ function queryResultTemplate(result){
         </div>
 
         <div class="figures">
-            <a href="${main.search_image_url_signed}" target=_blank><img src="/images/bg.png" class="lazyload" data-src="${main.search_image_url_thumbnail}" class="img-responsive" title="Searched (source) image" alt="Searched (source) image" style="width:300px" /></a>
+            <a href="${main.search_image_url_signed}" target=_blank><img src="/images/bg.png" class="lazyload" data-src="${main.search_image_url_thumbnail}" class="img-responsive" title="Imagem fonte" alt="Imagem fonte" style="width:300px" /></a>
 
-            <a href="${main.image_url}" target=_blank><img src="/images/bg.png" data-src="${main.image_url_thumbnail}" class="img-responsive"  title="Found image" alt="Found image"  style="width:300px" data-found="true" /></a>
+            <a href="${main.image_url}" target=_blank><img src="/images/bg.png" data-src="${main.image_url_thumbnail}" class="img-responsive"  title="Imagem encontrada" alt="Imagem encontrada"  style="width:300px" data-found="true" /></a>
         </div> <!-- figures -->
 
         <p class="base-sm-small-buffer">${(main.description) ? main.description : ""}</p>

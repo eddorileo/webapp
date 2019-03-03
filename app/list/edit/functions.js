@@ -172,14 +172,14 @@ function drawImages(images){
                     </span>
                     <span style="width:250px">
                         <p><a href="`+i.signed_image_url+`" target=_blank>`+i.filename+`</a><br>
-                        <strong>Infringing domains:</strong> `+i.unique_hosts+`<BR>
-                        <strong>Infringing pages:</strong> `+i.unique_pages+`<BR>
-                        <a href=\"/list/`+list_id+`/query?filters[image_id-eql]=`+i.image_id+`" class="link">View infringements</a>
+                        <strong>Dom&iacute;nios infratores:</strong> `+i.unique_hosts+`<BR>
+                        <strong>P&aacute;ginas infratoras:</strong> `+i.unique_pages+`<BR>
+                        <a href=\"/list/`+list_id+`/query?filters[image_id-eql]=`+i.image_id+`" class="link">Ver infra&ccedil;&otilde;es</a>
                         </p> 
                     </span>
                     <span>
-                        <p><strong>Last queued:</strong> `+dynamicDate(i.last_search_start)+`<br>
-                        <strong>Last search:</strong> `+dynamicDate(i.last_search_complete)+`<BR>
+                        <p><strong>&Uacute;ltima fila:</strong> `+dynamicDate(i.last_search_start)+`<br>
+                        <strong>&Uacute;ltima busca: < /strong> `+dynamicDate(i.last_search_complete)+`<BR>
                         </p> 
                     </span>
                 </div>`

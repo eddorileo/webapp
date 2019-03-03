@@ -1,9 +1,9 @@
 function selectAll(type){
     bulkAction = type;
     if(type == "selected"){
-        $('#check-status').html($('.result-check:checked').length +" results selected.")
+        $('#check-status').html($('.result-check:checked').length +" resultados selecionados.")
     }else if(type == "query"){
-        $('#check-status').html("All results selected.")
+        $('#check-status').html("Todos os resultados selecionados.")
 
     }
 }

@@ -1,31 +1,31 @@
 const default_tags = [
     
     {   "tag_id" : "approved",
-        "tag_label" : "Approved",
+        "tag_label" : "Aprovado",
         "colour" : "79E524",
         "state" : "default"
     },
     {
         "tag_id" : "unapproved",
-        "tag_label" : "Unapproved",
+        "tag_label" : "Desaprovado",
         "colour":"F2CD13",
         "state" : "default"
     },
     {
         "tag_id" : "investigate",
-        "tag_label" : "Investigate",
+        "tag_label" : "Investigar",
         "colour" : "24E590",
         "state" : "default"
     },
     {
         "tag_id" : "followup",
-        "tag_label" : "Follow Up",
+        "tag_label" : "Seguir",
         "colour" : "DB6B06",
         "state" : "default"
     },
     {
         "tag_id" : "trash",
-        "tag_label" : "Trash",
+        "tag_label" : "Lixo",
         "colour" : "FF1414",
         "state" : "default"
     }
@@ -56,7 +56,7 @@ function getListTags(list_id){
             $("#newTagButton").click(function(event) {
                 $('#tagtable').append(tagTableTemplate([{
                     tag_id: "new",
-                    tag_label: "New Tag",
+                    tag_label: "Novo R&oacute;tulo",
                     "colour": "ffffff",
                     "state": "live"
                 }]))
@@ -64,7 +64,7 @@ function getListTags(list_id){
                     method:'POST',
                     endpoint:'/list/'+list_id+'/tag',
                     body: {
-                        tag_label: "New Tag",
+                        tag_label: "Novo R&oacute;tulo",
                         "colour": getRandomColor(),
                         "state": "live"
                     },

@@ -2,40 +2,40 @@ const metric_types = {
     string: {
         sort: {
             asc: "A to Z",
-            desc: "Z to A"
+            desc: "Z para A"
         },
         operators: [
             {
                 operator: "cont",
-                label: "Contains"
+                label: "Cont&eacute;m"
             },
             {
                 operator: "ncont",
-                label: "Does not contain"
+                label: "N&atilde;o cont&eacute;m"
             }
         ]
     },
     number: {
         sort: {
             asc: "Low to High",
-            desc: "High to Low"
+            desc: "Cima para Baixo"
         },
         operators: [
             {
                 operator: "eql",
-                label: "Equals"
+                label: "Igual a "
             },
             {
                 operator: "ne",
-                label: "Does not equal"
+                label: "Diferente de "
             },
             {
                 operator: "lt",
-                label: "Less than"
+                label: "Menor que "
             },
             {
                 operator: "gt",
-                label: "Greater than"
+                label: "Maior que "
             }
         ],
 
@@ -46,12 +46,12 @@ const metric_types = {
     date: {
         sort: {
             asc:"First to Last",
-            desc: "Last to First"
+            desc: "Tr&aacute;s pra Frente"
         },
         operators: [
             {
                 operator: "between",
-                label: "Between"
+                label: "Entre"
             }
         ],
         value_fn: function(params,query_meta) {
@@ -98,12 +98,12 @@ const metric_types = {
     list: {
         sort: {
             asc: "A to Z",
-            desc: "Z to A"
+            desc: "Z para A"
         },
         operators: [
             {
                 operator: "in",
-                label: "Is in"
+                label: "Est&aacute; em"
             }
         ]
     },
@@ -114,7 +114,7 @@ const metric_types = {
         operators: [
             {
                 operator: "opt",
-                label: "Is"
+                label: "&eacute;"
             }
         ]
     }
@@ -123,33 +123,33 @@ const metric_types = {
 const metrics = {
     title: {
         metric: "title",
-        label: "Page Title",
+        label: "T&iacute;tulo da P&aacute;gina",
         type: "string",
         sortable: true
     },
     description: {
         metric: "description",
-        label: "Page Description",
+        label: "Descri&ccedil;&atilde;o da P&aacute;gina",
         type: "string",
         sortable: true
     },
    url: {
         metric: "url",
-        label: "Page URL",
+        label: "URL P&aacute;gina",
         type: "string",
         subtype: "url",
         sortable: true
     },
     host: {
         metric: "host",
-        label: "Domain",
+        label: "Dom&iacute;nio",
         type: "string",
         subtype: "url",
         sortable: true
     }, 
     language: {
         metric: "language",
-        label: "Language",
+        label: "Idioma",
         type: "list",
         sortable: true,
         value_fn: function(params,query_meta)  {
@@ -177,50 +177,50 @@ const metrics = {
     },
     host_first_found: {
         metric: "host_first_found",
-        label: "Domain First Found Date",
+        label: "Dom&iacute;nio mais recente",
         type: "date",
         sortable: true
     },
     found_timestamp: {
         metric: "found_timestamp",
-        label: "Result Found Date",
+        label: "Resultado com data",
         type: "date",
         sortable: true
     },
     image_url: {
         metric: "image_url",
-        label: "Image URL",
+        label: "URL Imagem",
         type: "string",
         subtype: "url",
         sortable: false
     },
     image_width: {
         metric: "image_width",
-        label: "Image Width",
+        label: "Largura imagem",
         type: "number",
         sortable: true
     },
     image_height: {
         metric: "image_height",
-        label: "Image Height",
+        label: "Altura imagem",
         type: "number",
         sortable: true
     },
     image_width_on_page: {
         metric: "image_width_on_page",
-        label: "Image Width on Page",
+        label: "Largura da imagem na P&aacute;gina",
         type: "number",
         sortable: true
     },
     image_height_on_page: {
         metric: "image_height_on_page",
-        label: "Image Height on Page",
+        label: "Altura da imagem na P&aacute;gina",
         type: "number",
         sortable: true
     },
     verified: {
         metric: "verified",
-        label: "Verified",
+        label: "Verificado",
         type: "list",
         sortable: true,
         value_fn: function(params,query_meta) {
@@ -230,15 +230,15 @@ const metrics = {
                 var opts = [
                     {
                         key: "true",
-                        value: "Found"
+                        value: "Encontrado"
                     },
                     {
                         key: "false",
-                        value: "Not Found"
+                        value: "N&atilde;o encontrado"
                     },
                     {
                         key: "null",
-                        value: "Not Checked Yet"
+                        value: "Ainda n&atilde;o checado"
                     },
                 ]
                 opts.forEach(function(opt) {
@@ -255,7 +255,7 @@ const metrics = {
     },
     verified_status_code: {
         metric: "verified_status_code",
-        label: "Verified Page Status",
+        label: "P&aacute;gina com status verificado",
         type: "options",
         sortable: false,
         value_fn: function(params,query_meta) {
@@ -269,7 +269,7 @@ const metrics = {
                     },
                     {
                         key: "error",
-                        value: "Error Page"
+                        value: "Erro na P&aacute;gina"
                     },
                     {
                         key: "offline",
@@ -292,7 +292,7 @@ const metrics = {
     },
     tag: {
         metric: "tag",
-        label: "Tag",
+        label: "R&oacute;tulo",
         type: "list",
         sortable: false,
         value_fn: function(params,query_meta)  {
@@ -320,7 +320,7 @@ const metrics = {
     },
     image_id: {
         metric: "image_id",
-        label: "Image ID",
+        label: "ID da imagem",
         type: "number",
         sortable: true
     }
