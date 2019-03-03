@@ -63,7 +63,7 @@ $( document ).ready(function(){
                 }
                 if( !credits.active || credits.active.length == 0){
                     $("#top_naviation").prepend(
-                        '<div id="loginmessage" class="alert alert-danger" role="alert"><center><p style="margin-bottom:0px">Vocë náo tem assinatura ativa. Todas as suas listas e dados serão apagados em 07 dias. <a href="/manage/subscription"><u>Adicionar novo pacote para sua conta</u></a></p></center></div>'
+                        '<div id="loginmessage" class="alert alert-danger" role="alert"><center><p style="margin-bottom:0px">Vocë n&aacute;o tem assinatura ativa. Todas as suas listas e dados ser&atilde;o apagados em 07 dias. <a href="/manage/subscription"><u>Adicionar novo pacote para sua conta</u></a></p></center></div>'
                     )
                 }
             }

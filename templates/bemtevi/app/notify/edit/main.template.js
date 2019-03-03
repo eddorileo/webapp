@@ -36,7 +36,7 @@ function notifyEditPageTemplate(result){
         </label>
 
     <br><br>
-    <strong id="email_url_label">Endere&ccedil;o de Email:</strong><br><input placeholder="email@domain.com" type=text class='form-control' style="width:100%" name="endpoint" value="${(result.notify.endpoint.length == 0) ? "" : result.notify.endpoint}"><br><br>
+    <strong id="email_url_label">Endere&ccedil;o de Email:</strong><br><input placeholder="email@dom&iacute;nio.com" type=text class='form-control' style="width:100%" name="endpoint" value="${(result.notify.endpoint.length == 0) ? "" : result.notify.endpoint}"><br><br>
     <a href="#" id="advancedNotifyLink" class="link">Mudar o formato do email ou alterar para chamadas para outros aplicativos (avan&ccedil;ado)</a><br>
     <div id="advancedNotify" class="subhead sm left">
         <strong>Notification Type:</strong><br>

@@ -1,7 +1,7 @@
 const metric_types = {
     string: {
         sort: {
-            asc: "A to Z",
+            asc: "A para Z",
             desc: "Z para A"
         },
         operators: [
@@ -17,8 +17,8 @@ const metric_types = {
     },
     number: {
         sort: {
-            asc: "Low to High",
-            desc: "Cima para Baixo"
+            asc: "Crescente",
+            desc: "Decrescente"
         },
         operators: [
             {
@@ -45,7 +45,7 @@ const metric_types = {
     },
     date: {
         sort: {
-            asc:"First to Last",
+            asc:"Primeiro ao &Uacute/ltimo",
             desc: "Tr&aacute;s pra Frente"
         },
         operators: [
@@ -97,7 +97,7 @@ const metric_types = {
     },
     list: {
         sort: {
-            asc: "A to Z",
+            asc: "A parao Z",
             desc: "Z para A"
         },
         operators: [

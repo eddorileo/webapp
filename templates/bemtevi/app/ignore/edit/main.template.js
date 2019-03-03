@@ -2,7 +2,7 @@ function ignoreEditPageTemplate(result){
     console.log(result)
     const page = `
     <h1 class="headline">${result.list.list_label}</h1>
-        ${(list_id != 0)? `<center><a href="/list/${result.list.list_id}" class="subhead sm link">Voltar para configuração da lista</a> -- <a href="/list/0/ignore" class="subhead sm link">Domínios da Conta Ignorado</a></center>` : "."}
+        ${(list_id != 0)? `<center><a href="/list/${result.list.list_id}" class="subhead sm link">Voltar para configura&ccedil;&atilde;o da lista</a> -- <a href="/list/0/ignore" class="subhead sm link">Domínios da Conta Ignorado</a></center>` : "."}
         
         <div class="row">
         <div class="col-md-1"></div>

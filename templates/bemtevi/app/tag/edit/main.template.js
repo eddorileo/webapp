@@ -47,7 +47,7 @@ function tagTableTemplate(tags){
             ${((tag.alias_of) ? tag.alias_of : "")}
         </td>
         <td>
-            <select data-tag_id="${tag.tag_id}" class="listStateField"><option value="live" ${((tag.state=="live")? "selected" : "")}>Visível</option><option ${((tag.state=="hidden")? "selected" : "")} value="hidden">Oculto</option></select>
+            <select data-tag_id="${tag.tag_id}" class="listStateField"><option value="live" ${((tag.state=="live")? "selected" : "")}>Vis&iacute;vel</option><option ${((tag.state=="hidden")? "selected" : "")} value="hidden">Oculto</option></select>
         </td>
         <td>
 
