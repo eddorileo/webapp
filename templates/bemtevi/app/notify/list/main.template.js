@@ -20,7 +20,7 @@ function notifyListPageTemplate(result){
     <?php
     ${(result.length > 0) ? (result.map(function (list) {
         return `<tr id="nrow${list.notify_id}">
-            <td><a href="/notify/${list.notify_id}" class="link">${(list.list_id =="all")? "All" :list.list_id.join(",")}</a></td>
+            <td><a href="/notify/${list.notify_id}" class="link">${(list.list_id =="all")? "Todos" :list.list_id.join(",")}</a></td>
             <td>
                  ${list.filter_string}
             </td>

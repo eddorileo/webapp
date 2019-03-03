@@ -1,7 +1,7 @@
 function uploaderSelect(params){
     switch(params.method){
         case "url": 
-        $('#uploader-container').html("<textarea id=\"add_lsv_urls\" placeholder=\"Image URLs (one per line)\" class=\"form-control\" style=\"width:100%;height: 270px;\" ></textarea><BR><button id=\"patchUrlList\" class=\"btn btn-medium\">Add Images</button>")
+        $('#uploader-container').html("<textarea id=\"add_lsv_urls\" placeholder=\"URLs das imagens (uma por linha)\" class=\"form-control\" style=\"width:100%;height: 270px;\" ></textarea><BR><button id=\"patchUrlList\" class=\"btn btn-medium\">Adicionar Imagens</button>")
             $('#uploader-select').hide()
             $('#uploader-container').show()
             $("#patchUrlList").click(function(event){
@@ -163,7 +163,7 @@ function drawImages(images){
             $("#container_images").append(
                 `<div style="display: grid; grid-template-columns: 30px 150px 250px 100%; padding:10px"> 
                     <span style="width:30px;">
-                        <a href="javascript: void(0)" onclick="apiCall({apikey:'`+loggedIn().apikey+`',method:'DELETE',endpoint:'/list/`+list_id+`/image/`+i.image_id+`',postAction:{action: 'hide',e: this.parentNode.parentNode}})\"><img alt=\"Delete Image\" title=\"Delete Image\" src=\"https://png.icons8.com/windows/24/e74c3c/trash.png\"/></a>                    
+                        <a href="javascript: void(0)" onclick="apiCall({apikey:'`+loggedIn().apikey+`',method:'DELETE',endpoint:'/list/`+list_id+`/image/`+i.image_id+`',postAction:{action: 'hide',e: this.parentNode.parentNode}})\"><img alt=\"Deletar Imagem\" title=\"Deletar Imagem\" src=\"https://png.icons8.com/windows/24/e74c3c/trash.png\"/></a>                    
                     </span>
                     <span style="width:150px">
                         <a href="`+i.signed_image_url+`" target=_blank>
