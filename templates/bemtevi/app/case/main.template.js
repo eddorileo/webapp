@@ -17,7 +17,7 @@ function casesListPageTemplate(cases){
                 <td><strong>Status do Usu&aacute;rio</strong></td> 
                 <td><strong>Parent Status</strong></td>
                 <td><strong>Datas dos Casos</strong></td>
-                <td><strong>Ações</strong></td>
+                <td><strong>A&ccedil;&otilde;es</strong></td>
             </tr>
             ${cases.map(function (cased) {
                 return `

@@ -1,6 +1,6 @@
 const default_tags = [
     
-    {   "tag_id" : "approveda",
+    {   "tag_id" : "approved",
         "tag_label" : "Aprovado",
         "colour" : "79E524",
         "state" : "default"

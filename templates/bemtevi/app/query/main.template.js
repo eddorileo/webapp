@@ -18,7 +18,7 @@ function queryPageTemplate(result,request,resolved_tags){
                     <header class="widget-toggle"><i class="ion ion-android-options"></i> R&Oacute;TULOS <i class="ion ion-arrow-down-b"></i></header>
                     <div class="widget-group"> 
                     <div class="widget widget-tags">
-                        <span class="h5"><i class="icon icon-tags"></i> &nbsp;Tags</span>
+                        <span class="h5"><i class="icon icon-tags"></i> &nbsp;R&oacute;tulos</span>
 
                         <ul class="tags-list block">
                         ${resolved_tags.tags.map(function (tag) {
@@ -45,7 +45,7 @@ function queryPageTemplate(result,request,resolved_tags){
                 <div class="panel-result-header">
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                        <h5>${result.query_result.ngroups} domínios com ${result.query_result.matches} infraç&atilde;o</h5>
+                        <h5>${result.query_result.ngroups} dom&iacute;nios com ${result.query_result.matches} infra&ccedil;&atilde;o</h5>
                     </div> <!-- col -->
 
                     <div class="col-xs-6 col-sm-6 col-md-6 controls txt-sm">
@@ -86,7 +86,7 @@ function queryPageTemplate(result,request,resolved_tags){
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <p>
-                                <a href="#" id="applySettings" class="btn btn-normal" style="font-size:1em">Aplicar Configurações</a>
+                                <a href="#" id="applySettings" class="btn btn-normal" style="font-size:1em">Aplicar Configura&ccedil;&otilde;es</a>
                             </p>
                      
                         </div>
@@ -111,7 +111,7 @@ function queryPageTemplate(result,request,resolved_tags){
 
                         <div class="col-md-3">
                             <div class="page-options">
-                                <a href="#" id="select-all-page" >All</a> <a href="#" id="select-none" >None</a>
+                                <a href="#" id="select-all-page" >Todos</a> <a href="#" id="select-none" >Nenhum</a>
                             </div> <!-- page options -->
                         </div> <!-- col -->
                     </div> <!-- row -->
@@ -140,10 +140,10 @@ function queryResultTemplate(result){
         <a href="${main.url}" target=_blank class="link"><h3 class="font-md " style="display:inline;color:#000000;text-decoration:underline;">${main.host}:</h3> <h3 class="font-md text-primary-a" style="display:inline">${main.title}</h3></a>
         <div class="result-description">
             <div class="result-content">
-                <span class="meta base-sm-buffer">${main.host} ${(other_matches>0) ? `<span style="color: grey">&plus; ${other_matches} other matches</span>` : ""}</span>
+                <span class="meta base-sm-buffer">${main.host} ${(other_matches>0) ? `<span style="color: grey">&plus; ${other_matches} outros resultados</span>` : ""}</span>
             </div>
             <div class="tag-overlay">
-                <span class="meta base-sm-buffer text-primary-a"><a href="${main.url.substring(0,4)+"://"+main.host}" class="text-primary-a" target=_blank>${main.host}</a> ${(other_matches>0) ? `<a href="#" class="additional_rows link" data-host="${res.groupValue}">&plus; ${other_matches} other matches</a><a href="#" class="additional_rows_alt link" style="display:none" data-host="${res.groupValue}">- hide other matches</a>` : ""} - <a href="#" class="link text-primary-a  ignoreDomain"  data-host="${main.host}">Ignorar domínio</a> </span>
+                <span class="meta base-sm-buffer text-primary-a"><a href="${main.url.substring(0,4)+"://"+main.host}" class="text-primary-a" target=_blank>${main.host}</a> ${(other_matches>0) ? `<a href="#" class="additional_rows link" data-host="${res.groupValue}">&plus; ${other_matches} other matches</a><a href="#" class="additional_rows_alt link" style="display:none" data-host="${res.groupValue}">- esconder outros resultados</a>` : ""} - <a href="#" class="link text-primary-a  ignoreDomain"  data-host="${main.host}">Ignorar dom&iacute;nio</a> </span>
             </div>
         </div>
 
@@ -160,7 +160,7 @@ function queryResultTemplate(result){
                 
             </div>
             <div class="tag-overlay">
-                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem n&atilde;o encontrada na p&aacute;gina"  title="Imagem n&atilde;o encontrada na p&aacute;gina"> Imagem n&atilde;o encontrada na p&aacute;gina'): ""}</span>
+                <span class ="meta"> ${languageCodeToLanguage(main.language)} -Encontrado: ${dynamicDate(atomToUnixTimestamp(main.found_timestamp))}.${(main.hasOwnProperty("verified")) ? ((main.verified == true) ?'<span class="text-primary-b"><i class="icon icon-check-success"></i> Verified '+dynamicDate(atomToUnixTimestamp(main.verified_timestamp)) +'</i></span>': '<img src="https://png.icons8.com/windows/18/95a5a6/help.png" alt="Imagem n&atilde;o encontrada na p&aacute;gina"  title="Imagem n&atilde;o encontrada na p&aacute;gina"> Imagem n&atilde;o encontrada na p&aacute;gina'): ""}</span>
                 
             </div>
         </div>
@@ -211,7 +211,7 @@ function additionalResultTemplate(results,resolved_tags){
 }
 
 function tagButtons(tags,result){
-    const tagSpan = `<ul class="tags-list inline"><li>${(result.result_id=="bulk") ? 'Seleç&atilde;o: ' : ''} <i class="icon icon-tags"></i></li>
+    const tagSpan = `<ul class="tags-list inline"><li>${(result.result_id=="bulk") ? 'Sele&ccedil;&atilde;o: ' : ''} <i class="icon icon-tags"></i></li>
     ${tags.map(function (tag) {
        
         return `<li>
