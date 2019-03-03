@@ -1,10 +1,10 @@
 
 function tagPageTemplate(list,tags){
     const page = `
-    <h1 class="headline">${list.list_label} Rótulos</h1>
+    <h1 class="headline">${list.list_label} R&oacute;tulos</h1>
 
-    ${((list.list_id > 0) ? "<center><a href=\"/list/"+list.list_id+"/edit\" class=\"subhead sm link\">Voltar para lista de configurações</a> -- <a href=\"/list/0/tag\" class=\"subhead sm link\">Rótulos da Conta</a></center>" : "")}
-    <a class="pull-right btn btn-small" href="#" id="newTagButton">Novo Rótulo</a> <div class="clearfix"></div>
+    ${((list.list_id > 0) ? "<center><a href=\"/list/"+list.list_id+"/edit\" class=\"subhead sm link\">Voltar para lista de configurações</a> -- <a href=\"/list/0/tag\" class=\"subhead sm link\">R&oacute;tulos da Conta</a></center>" : "")}
+    <a class="pull-right btn btn-small" href="#" id="newTagButton">Novo R&oacute;tulo</a> <div class="clearfix"></div>
         
         <div class="row">
             <div class="col-md-1"></div>
@@ -12,7 +12,7 @@ function tagPageTemplate(list,tags){
                 <table class='table subhead sm left' style="width:100%!important">
                     <tbody id='tagtable' >
                         <tr>
-                            <td><strong>Rótulo</strong></td>
+                            <td><strong>R&oacute;tulo</strong></td>
                             <td><strong>Cor</strong></td>
                             <td><strong>Mapeado para</strong></td>
                             <td><strong>Estado</strong></td>
@@ -21,7 +21,7 @@ function tagPageTemplate(list,tags){
         
                     </tbody>
                 </table>
-            ${((tags.length === 0 && list.list_id != 0) ? "<p>Você não possui nenhum rótulo customizado. Rótulo padrão será usado. <a href=\"#\" onclick=\"newTag(); return false;\" class=\"link\">Adicionar novo rótulo</a> </p>": "<a class=\"sm link pull-right\" href=\"#\" onclick=\"showDefaultTags(); return false;\">Restaurar Padrão</a>")}
+            ${((tags.length === 0 && list.list_id != 0) ? "<p>Voc&ecirc; n&atilde;o possui nenhum r&oacute;tulo customizado. R&oacute;tulo padr&atilde;o ser&aacute; usado. <a href=\"#\" onclick=\"newTag(); return false;\" class=\"link\">Adicionar novo r&oacute;tulo</a> </p>": "<a class=\"sm link pull-right\" href=\"#\" onclick=\"showDefaultTags(); return false;\">Restaurar Padr&atilde;o</a>")}
             </div>
 
             

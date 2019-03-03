@@ -12,9 +12,9 @@ function casesListPageTemplate(cases){
                 <td><strong>ID</strong></td>
                 <td><strong>Imagem Buscada</strong></td> 
                 <td><strong>Imagem Infratora</strong></td> 
-                <td><strong>Página Infratora</strong></td> 
+                <td><strong>P&aacute;gina Infratora</strong></td> 
                 <td><strong>Datas do Resultado</strong></td> 
-                <td><strong>Status do Usuário</strong></td> 
+                <td><strong>Status do Usu&aacute;rio</strong></td> 
                 <td><strong>Parent Status</strong></td>
                 <td><strong>Datas dos Casos</strong></td>
                 <td><strong>Ações</strong></td>

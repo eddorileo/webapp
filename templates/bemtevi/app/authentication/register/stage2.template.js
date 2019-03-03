@@ -86,7 +86,7 @@ function registerStage2Template(){
                 <h2>Upload até 3 imagens para começar seu teste</h2><br>
                 <a class="link sm subhead" id="registerStage2Link" href="#">N&atilde;o quer carregar imagens agora? Cheque o seu email para os detalhes do login.</a><br>
                 <div><div id="fine-uploader-gallery" style="height:330px"></div></div><BR>
-                <a class="btn btn-normal" id="registerStage2Submit" href="#" >Próximo ></a>
+                <a class="btn btn-normal" id="registerStage2Submit" href="#" >Pr&oacute;ximo ></a>
             </div>
             <div class="col-sm-2 col-md-2"></div>
         </div>

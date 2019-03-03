@@ -21,7 +21,7 @@ function doRequest(params){
         postAction: {action: "nothing"},
         callback: function(result) {
             if(!result.query_result){
-                handleAPIError({error: "Um erro ocorreu ao carregar os resultados. O erro foi provavelmente devido aos filtros que voc&ecirc; escolheu. Este erro será registrado no log do sistema para futura investiga&ccedil;&atilde;o."},{})
+                handleAPIError({error: "Um erro ocorreu ao carregar os resultados. O erro foi provavelmente devido aos filtros que voc&ecirc; escolheu. Este erro ser&aacute; registrado no log do sistema para futura investiga&ccedil;&atilde;o."},{})
             }else{
                 processResponse(params,result)
                 $("#apiquery").val("https://api.infringement.report/3.0"+api_url)

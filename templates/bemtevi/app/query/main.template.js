@@ -3,7 +3,7 @@ function queryPageTemplate(result,request,resolved_tags){
     const page = `
         <div class="search-panel-top">
         <h1 class="headline txt-left">${result.list.list_label}</h1>
-            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista est&atilde;o na fila para serem pesquisadas. Você poder&aacute; encontrar mais resultados em breve.</div>' : "")}
+            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista est&atilde;o na fila para serem pesquisadas. Voc&ecirc; poder&aacute; encontrar mais resultados em breve.</div>' : "")}
  
         <div id="chart_div" style="width:100%;overflow:none"></div>
     </div> <!-- search panel top -->
@@ -15,7 +15,7 @@ function queryPageTemplate(result,request,resolved_tags){
         <div class="row">
             <div class="col-md-3 primary-sidebar">
                 
-                    <header class="widget-toggle"><i class="ion ion-android-options"></i> TAGS <i class="ion ion-arrow-down-b"></i></header>
+                    <header class="widget-toggle"><i class="ion ion-android-options"></i> R&Oacute;TULOS <i class="ion ion-arrow-down-b"></i></header>
                     <div class="widget-group"> 
                     <div class="widget widget-tags">
                         <span class="h5"><i class="icon icon-tags"></i> &nbsp;Tags</span>
