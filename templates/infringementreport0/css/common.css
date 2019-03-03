@@ -3,24 +3,24 @@
 /****************************/
 @font-face {
 	font-family: 'Monsterrat Bold';
-	src: url('/templates/bemtevi/fonts/monsterrat-bold.eot');
-	src: local('☺'), url('/templates/bemtevi/fonts/monsterrat-bold.woff') format('woff'), url('/templates/bemtevi/fonts/monsterrat-bold.ttf') format('truetype'), url('/templates/bemtevi/fonts/monsterrat-bold.svg') format('svg');
+	src: url('/templates/infringementreport/fonts/monsterrat-bold.eot');
+	src: local('☺'), url('/templates/infringementreport/fonts/monsterrat-bold.woff') format('woff'), url('/templates/infringementreport/fonts/monsterrat-bold.ttf') format('truetype'), url('/templates/infringementreport/fonts/monsterrat-bold.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Monsterrat Light';
-	src: url('/templates/bemtevi/fonts/monsterrat-light.eot');
-	src: local('☺'), url('/templates/bemtevi/fonts/monsterrat-light.woff') format('woff'), url('/templates/bemtevi/fonts/monsterrat-light.ttf') format('truetype'), url('/templates/bemtevi/fonts/monsterrat-light.svg') format('svg');
+	src: url('/templates/infringementreport/fonts/monsterrat-light.eot');
+	src: local('☺'), url('/templates/infringementreport/fonts/monsterrat-light.woff') format('woff'), url('/templates/infringementreport/fonts/monsterrat-light.ttf') format('truetype'), url('/templates/infringementreport/fonts/monsterrat-light.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 } 
 
 @font-face {
 	font-family: 'Monaco';
-	src: url('/templates/bemtevi/fonts/monaco.eot');
-	src: local('☺'), url('/templates/bemtevi/fonts/monaco.woff') format('woff'), url('/templates/bemtevi/fonts/monaco.ttf') format('truetype'), url('/templates/bemtevi/fonts/monaco.svg') format('svg');
+	src: url('/templates/infringementreport/fonts/monaco.eot');
+	src: local('☺'), url('/templates/infringementreport/fonts/monaco.woff') format('woff'), url('/templates/infringementreport/fonts/monaco.ttf') format('truetype'), url('/templates/infringementreport/fonts/monaco.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

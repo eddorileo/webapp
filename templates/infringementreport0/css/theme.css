@@ -1,0 +1,987 @@
+/********************/
+/*** MARK : COLOR ***/
+/********************/
+
+
+/*
+	[ ]
+*/
+a,
+a:hover {
+	color: inherit;
+}
+
+/*
+	[ Black ]
+*/
+body,
+.btn,
+#page-footer,
+ul.tags-list .tag:focus,
+.panel-result-content .meta a,
+.jFiler-theme-default .jFiler-input,
+.jFiler-theme-default .jFiler-input-button,
+.panel-result-footer .page-options a.active {
+    color: #000000;
+}
+
+input:disabled {
+	-webkit-text-fill-color: #000000;
+}
+
+
+
+
+
+/*
+	[ Burnt Sienna ]
+*/
+.ion-close-circled, 
+.ion-close-circled:hover {    
+    color: #ed7061;
+}
+
+
+
+
+
+/*
+	[ Cyprus ]
+*/
+h1.light,
+.color-secondary,
+.account-info .price,
+.account-info .period,
+#membership-plan .plan-details.unlimited {
+    color: #00333e;
+}
+
+
+
+
+
+/*
+	[ Keppel ]
+*/
+.color-success,
+.code-block .json-value,
+.code-block .json-string,
+#membership-plan #tab-value .plan-details {
+    color: #44b09b;
+}
+
+
+
+
+
+
+/*
+	[ Mantis ]
+*/
+.text-primary-b {
+	color: #6cc35b;
+}
+
+
+
+
+
+
+
+
+/*
+	[ Oslo Gray ]
+*/
+.link-a,
+.txt-dark-a,
+.panel-result-content .meta,
+.panel-result-footer .page-options a {
+	color: #939598;
+}
+
+
+
+
+
+
+
+/*
+	[ Red Damask ]
+*/
+.color-alert,
+.code-block .json-key,
+#membership-plan #tab-pro .plan-details {
+    color: #d65848;
+}
+
+
+
+
+
+/*
+	[ Ripe Lemon ]
+*/
+.link,
+.link:hover,
+h1.headline,
+.h1.headline,
+.color-primary,
+.text-primary-a,
+.color-primary:hover,
+ul.list.primary li:before,
+.search-panel-top .nav-link,
+#membership-plan .plan-details,
+.primary-sidebar .widget-toggle,
+.search-form .cs-checkbox-group input:checked ~ .cs-checkbox:after {
+    color: #f2cd13;
+}
+
+.btn-outline-light:hover {
+	color: #f2cc12!important;
+}
+
+
+
+
+
+/*
+	[ White ]
+*/
+.banner h1,
+.btn:hover,
+.btn:focus,
+.btn:active,
+h1.headline.secondary,
+#slider-wrap #button-plus,
+#slider-wrap #button-minus,
+#membership-plan .nav-tabs > li.active > a,
+.jFiler-theme-default .jFiler-input-button:hover{
+	color: #ffffff;
+}
+
+/*******************/
+/*** END : COLOR ***/
+/*******************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************/
+/*** MARK : BACKGROUND ***/
+/*************************/
+
+/*
+	[ All Image Backgrounds ]
+*/
+.btn-normal, .btn-mid, .btn-small,.btn-multiselect,
+.btn-medium,
+input:disabled,
+#membership-plan .nav-tabs > li > a,
+.jFiler-theme-default .jFiler-input,
+.jFiler-theme-default .jFiler-input-button {
+    background: none;
+}
+
+.icon,
+ul.checklist li:before {
+    background: url('/images/sprite.png') no-repeat;
+}
+
+
+
+
+
+
+
+/*
+	[ Black ]
+*/
+.section-b .cell:first-child {
+	background: #000000;
+}
+
+.page-overlay {
+	background: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+/*
+	[ Burnt Sienna ]
+*/
+.tag-danger.active {
+	background: #ed7061;
+}
+
+
+
+
+
+
+/*
+	[ Cyprus ]
+*/
+#page-footer,
+#slider-wrap #button-plus,
+#slider-wrap #button-minus,
+input[type=radio]:checked ~ .radio-button:after,
+input[type=checkbox]:checked ~ .checkbox-button:after,input[type=checkbox]:checked {
+    background: #00333e;
+}
+
+
+
+
+
+/*
+	[ Keppel ]
+*/
+#membership-plan .nav-tabs > li#value-plan.active > a {
+    background: #44b09b;
+}
+
+.tag-info.active {
+	background: #45b19c;
+}
+
+
+
+
+
+/*
+	[ Mantis ]
+*/
+.tag-success.active {
+	background: #6bc259;
+}
+
+
+
+
+
+
+
+/*
+	[ Oslo Gray ]
+*/
+.tag-default.active {
+	background: #92999c;
+}
+
+
+
+
+
+
+
+
+
+/*
+	[ Pacific Blue ]
+*/
+.tag-secondary.active {
+	background: #00aaba;
+}
+
+
+
+
+
+
+
+/*
+	[ Red Damask ]
+*/
+#membership-plan .nav-tabs > li#pro-plan.active > a {
+    background: #d65848;
+}
+
+
+
+
+
+/*
+	[ Ripe Lemon ]
+*/
+.banner,
+.section-a,
+#page-header.home,
+.tag-warning.active,
+.btn-outline-light:hover {
+	background: #f2cc12;
+}
+
+
+
+
+
+
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.jFiler-theme-default .jFiler-input-button:hover,
+#membership-plan .nav-tabs > li#starter-plan.active > a {
+  background-color: #f2cd13;
+}
+
+
+
+
+
+/*
+	[ White ]	
+*/
+#page-footer,
+#page-header.secondary,
+.btn-outline-light:hover,
+.label-radio .radio-button,
+#primary-menu .menu-container,
+.label-checkbox .checkbox-button,
+.label-radio .radio-button:after,
+.label-checkbox .checkbox-button:after {
+    background: #ffffff;
+}
+/************************/
+/*** END : BACKGROUND ***/
+/************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************/
+/*** MARK : BOX SHADOW ***/
+/*************************/
+/*
+	[ ]
+*/
+#slider-wrap #button-plus,
+#slider-wrap #button-minus,
+.jFiler-theme-default .jFiler-input {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+ }
+
+
+
+
+
+ /*
+	[ Black ]
+ */
+ #primary-menu ul:before {
+ 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+ }
+/************************/
+/*** END : BOX SHADOW ***/
+/************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************/
+/*** MARK : BORDER ***/
+/*********************/
+/*
+	[ ]
+*/
+hr,
+form fieldset,
+input:disabled,
+#slider-wrap #button-plus,
+#slider-wrap #button-minus,
+#membership-plan .nav-tabs,
+.jFiler-theme-default .jFiler-input {
+	border: none;
+}
+
+.table-primary tr:first-child td {
+	border-top: none;
+}
+
+
+
+
+
+/*
+	[ Black ]
+*/
+hr {
+	border-top: 1px #000000 solid;
+}
+
+
+
+
+
+
+
+/*
+	[ Burnt Sienna ]
+*/
+.tag-danger {
+	border: 1px #ed7061 solid;
+}
+
+
+
+
+
+
+
+/*
+	[ Cyprus ]
+*/
+.label-radio .radio-button,
+.label-checkbox .checkbox-button {
+    border: 3px #00333e solid;
+}
+
+
+
+
+
+/*
+	[ Grey ]
+*/
+.cs-col {
+    border-bottom: 2px #7f7f7f solid;
+}
+
+
+
+
+
+/*
+	[ Keppel ]
+*/
+.tag-info {
+	border: 1px #45b19c solid;
+}
+
+#membership-plan .nav-tabs > li#value-plan > a {
+    border: 2px #44b09b solid;
+}
+
+
+
+
+/*
+	[ Mantis ]
+*/
+.tag-success {
+	border: 1px #6bc259 solid;
+}
+
+
+
+
+
+
+/*
+	[ Oslo Gray ]
+*/
+.tag-default {
+	border: 1px #92999c solid;
+}
+
+
+
+
+
+
+/*
+	[ Pacific Blue ]
+*/
+.tag-secondary {
+	border: 1px #00aaba solid;
+}
+
+
+
+
+
+
+/*
+	[ Red Damask ]
+*/
+#membership-plan .nav-tabs > li#pro-plan > a {
+    border: 2px #d65848 solid;
+}
+
+
+
+
+
+
+/*
+	[ Ripe Lemon ]
+*/
+select,
+textarea,
+.btn-normal, .btn-mid, .btn-small,.btn-multiselect,
+.btn-medium,
+.code-block,
+.input-file,
+
+input[type="text"],input[type="number"],
+input[type="email"],
+input[type="password"],
+.btn-action-group .btn,
+.search-form .cs-checkbox,
+.primary-sidebar .widget-toggle,
+#membership-plan .nav-tabs > li > a,
+.jFiler-theme-default .jFiler-input-button {
+    border: 2px #f2cd13 solid;
+}
+
+.btn-multiselect {
+	-webkit-appearance: none;
+    -moz-border-radius: 0px;
+    font-family: 'Monsterrat Light';
+    font-size: 16px;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0.7em 1.2em;
+}
+.tag-warning {
+	border: 1px #f2cd13 solid;
+}
+
+.cs-table header .cs-col {
+    border-bottom: 3px #f2cd13 solid;
+}
+
+.table-primary tr:not(:last-child) td {
+	border-bottom: 1px #f2cc12 solid;
+}
+
+.panel-result-footer .page-options a:not(:last-child) {
+    border-right: 1px #f2cc12 solid;
+}
+
+
+
+
+
+/*
+	[ White ]
+*/
+.btn-outline-light {
+	border: 2px #ffffff solid;
+}
+/********************/
+/*** END : BORDER ***/
+/********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+					/* [ MARK: < 576PX | EXTRA SMALL | COL ] */
+							@media (max-width: 576px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+					/* [ END: < 576PX | EXTRA SMALL | COL ] */
+
+										}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+						/* [ MARK: > 576PX | SMALL | COL-SM ] */
+
+								@media (min-width: 576px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+						/* [ END: > 576PX | SMALL | COL-SM ] */
+
+											}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+						/* [ MARK: > 767PX | SMALL | COL-SM ] */
+
+								@media (max-width: 767px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+/*********************/
+/*** MARK : BORDER ***/
+/*********************/
+/*
+	[ Ripe Lemon ]
+*/
+.widget-group {
+	border-bottom: 2px #f2cc12 solid;
+}
+/********************/
+/*** END : BORDER ***/
+/********************/
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+							/* [ END: < 767PX | SMALL | COL-SM ] */
+												} 
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+							/* [ MARK: > 992PX | LARGE | COL-LG ] */
+
+									@media (min-width: 992px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+							/* [ END: > 992PX | LARGE | COL-LG ] */
+
+											}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+					/* [ MARK: > 1200PX | EXTRA LARGE | COL-XL ] */
+
+							@media (min-width: 1200px) {
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+					/* [ END: > 1200PX | EXTRA LARGE | COL-XL ] */
+
+										}
+
+/***********************************************************************************************/
+/***********************************************************************************************/
