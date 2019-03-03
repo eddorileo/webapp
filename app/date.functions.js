@@ -20,27 +20,27 @@ function date_relative(unix_timestamp) {
     }
 
     if (elapsed < msPerMinute) {
-         return Math.round(elapsed/1000) + ' segundos'+suffix;   
+        return Math.round(elapsed / 1000) + ' segundo(s)' + suffix;
     }
 
     else if (elapsed < msPerHour) {
-         return Math.round(elapsed/msPerMinute) + ' minutos'+suffix;   
+        return Math.round(elapsed / msPerMinute) + ' minuto(s)' + suffix;
     }
 
     else if (elapsed < msPerDay ) {
-         return Math.round(elapsed/msPerHour ) + ' horas'+suffix;   
+         return Math.round(elapsed/msPerHour ) + ' hora(s)'+suffix;   
     }
 
     else if (elapsed < msPerMonth) {
-        return Math.round(elapsed/msPerDay) + ' dias'+suffix;   
+        return Math.round(elapsed / msPerDay) + ' dia(s)' + suffix;
     }
 
     else if (elapsed < msPerYear) {
-        return Math.round(elapsed/msPerMonth) + ' meses'+suffix;   
+        return Math.round(elapsed / msPerMonth) + ' mes(es)' + suffix;
     }
 
     else {
-        return Math.round(elapsed/msPerYear ) + ' anos'+suffix;   
+        return Math.round(elapsed / msPerYear) + ' ano(s)' + suffix;
     }
 }
 
