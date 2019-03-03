@@ -10,7 +10,7 @@ function forgotPassTemplate(){
                     
                     <input id="email" type=email placeholder="your@email.com" name="email" />
                     
-                    <a href="" class="btn-medium" id="resetPasswordButton">Reset Password</a>
+                    <a href="" class="btn-medium" id="resetPasswordButton">Resetar Senha</a>
                     
                 </div>
                    

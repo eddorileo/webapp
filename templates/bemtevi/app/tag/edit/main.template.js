@@ -21,7 +21,7 @@ function tagPageTemplate(list,tags){
         
                     </tbody>
                 </table>
-            ${((tags.length === 0 && list.list_id != 0) ? "<p>Voc&ecirc; n&atilde;o possui nenhum r&oacute;tulo customizado. R&oacute;tulo padr&atilde;o ser&aacute; usado. <a href=\"#\" onclick=\"newTag(); return false;\" class=\"link\">Adicionar novo r&oacute;tulo</a> </p>": "<a class=\"sm link pull-right\" href=\"#\" onclick=\"showDefaultTags(); return false;\">Restaurar Padr&atilde;o</a>")}
+            ${((tags.length === 0 && list.list_id != 0) ? "<p>Voc&ecirc; n&atilde;o possui nenhum r&oacute;tulo customizado. R&oacute;tulo padr&atilde;o ser&aacute; usado. Adicione novo r&oacute;tulo </p>": "<a class=\"sm link pull-right\" href=\"#\" onclick=\"showDefaultTags(); return false;\">Restaurar Padr&atilde;o</a>")}
             </div>
 
             

@@ -34,7 +34,7 @@ function listsTableTemplate(params){
                 Resultado: ${((!list.source_images_found) ? "0" : list.source_images_found) }
             </td>
             <td>
-                ${ ((list["unique_hosts"] == 0) ? "No infringements found" : "Dom&iacute;nios: "+((!list.unique_hosts) ? 0 : list.unique_hosts)+"<br> P&aacute;ginas: "+((!list.unique_pages) ? 0 : list.unique_pages))}
+                ${ ((list["unique_hosts"] == 0) ? "Nenhuma infra&ccedil;&atilde;o encontrada" : "Dom&iacute;nios: "+((!list.unique_hosts) ? 0 : list.unique_hosts)+"<br> P&aacute;ginas: "+((!list.unique_pages) ? 0 : list.unique_pages))}
             </td>
             ${(params.monitor_strategy === "classic") ? `
             <td id="last_search_td_${list.list_id}">
@@ -54,11 +54,11 @@ function listsTableTemplate(params){
             
             ${(params.monitor_strategy === "classic") ? `
                 <a href="javascript: void(0)" onclick="apiCall({method:'GET',endpoint:'/search/${list.list_id}',postAction:{action:'setHTML',e:document.getElementById('last_search_td_${list.list_id}')}})">
-                        <img class="spin" onclick="$(this).css({'transform': 'rotate(1440deg)'});" alt="Search List Now" title="Search List Now" src="https://png.icons8.com/windows/24/7f8c8d/synchronize.png"/>
+                        <img class ="spin" onclick="$(this).css({'transform': 'rotate(1440deg)'});" alt="Buscar lista agora" title="Buscar lista agora" src="https://png.icons8.com/windows/24/7f8c8d/synchronize.png"/>
                     </a>
             ` : `` }
                 <a href="/list/${list.list_id}/edit">
-                    <img alt="Edit List" title="Edit List" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/>
+                    <img alt="Editar Lista" title="Editar Lista" src="https://png.icons8.com/windows/24/7f8c8d/edit.png"/>
                 </a> 
                 <a href="javascript: void(0)" onclick="apiCall({method:'DELETE',endpoint:'/list/${list.list_id}',precheck:'Voc&ecirc; tem certeza de que deseja deletar esta lista?',postAction:{action:'hide',e:document.getElementById('listrow${list.list_id}')}});">
                     <img alt="Deletar Lista" title="Deletar Lista" src="https://png.icons8.com/windows/24/7f8c8d/trash.png"/>

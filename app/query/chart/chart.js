@@ -1,7 +1,7 @@
 function initChart(result){
     var chartData = result.facet_ranges.host_first_found_range.buckets
     var chart = [
-        [{type: 'date', label: 'Domain Found Date'}, {type: 'number', label: 'Domains Found'}, { role: 'style' }]
+        [{type: 'date', label: 'Data do resultado'}, {type: 'number', label: 'Dom&iacute;nios encontrados'}, { role: 'style' }]
     ]
     var x = 0,bars = {}
     chartData.forEach(function(date){

@@ -3,7 +3,7 @@ function tagPageTemplate(list,tags){
     const page = `
     <h1 class="headline">R&oacute;tulos</h1>
     <p class ="subhead sm">Voc&ecirc; pode modificar os r&oacute;tulos que est&atilde;o dispon&iacute;veis.
-    Caso contr&aacute;rio, r&oacute; tulos padr&otilde; es ser&atilde;o usados.</p>
+    Caso contr&aacute;rio, r&oacute;tulos padr&otilde;es ser&atilde;o usados.</p>
     
 
     <table class="table subhead sm left">

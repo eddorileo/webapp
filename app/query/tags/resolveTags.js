@@ -1,5 +1,5 @@
 function resolveTags(result,state){
-    var tags = result.resolved_tags.concat([{tag_id: "all", "tag_label": "All Results", colour: "92999c"}])
+    var tags = result.resolved_tags.concat([{tag_id: "all", "tag_label": "Todos os Resultados", colour: "92999c"}])
     var all_tag_ids = tags.map(function(x) { return String(x["tag_id"])})
     var tags_found = convertSolrFacetToObject(result.facets.facet_fields.tag);
     tags_found["all"] = result.query_result.matches

@@ -32,7 +32,7 @@ function manageAccountPageTemplate(params){
             
                     
                     <fieldset class="base-lg-buffer">
-                        <label class="base-xs-small-buffer">API Key</label>
+                        <label class="base-xs-small-buffer">Chave API</label>
                         <input type="text" value="${params.user_info.apikey}" class="max"  />
                         <span class="para base-xs-small-buffer"><a href="#" id="resetAPI" class="link">Resetar</a> &nbsp; <a href="https://buscalogo.api-docs.io/" class="link"> </a></span>
                     </fieldset>

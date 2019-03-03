@@ -108,7 +108,7 @@ function initPage(){
 function setImageEvents(){
     $("img").unveil()
     $('img').error(function(e){
-        $(this).attr('src', '/templates/infringementreport/app/query/image-not-loaded.png');
+        $(this).attr('src', '/templates/bemtevi/app/query/image-not-loaded.png');
     });
 }
 

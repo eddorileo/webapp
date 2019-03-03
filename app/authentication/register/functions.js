@@ -63,7 +63,7 @@ function initPage(){
 function checkTerms(){
 
     if(!$('#termsagreed').is(':checked')){
-        alert('You must agree to the terms of service to register')
+        alert('Voc&ecirc; precisa concordar com os termos do servi&ccedil antes de registrar.')
         return false;
     }
     return true;
