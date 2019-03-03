@@ -82,7 +82,7 @@ function registerStage2Template(){
         <div class="row login-form">
             <div class="col-sm-2 col-md-2"></div>
             <div class="col-sm-8 col-md-8">
-                <h2><a href="/login" class="link">Logar</a> | Registrar</h2>
+                <h2><a href="/login" class="link">Entrar</a> | Registrar</h2>
                 <h2>Upload até 3 imagens para come&ccedil;ar seu teste</h2><br>
                 <a class="link sm subhead" id="registerStage2Link" href="#">N&atilde;o quer carregar imagens agora? Cheque o seu email para os detalhes do login.</a><br>
                 <div><div id="fine-uploader-gallery" style="height:330px"></div></div><BR>

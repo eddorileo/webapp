@@ -3,7 +3,7 @@ function queryPageTemplate(result,request,resolved_tags){
     const page = `
         <div class="search-panel-top">
         <h1 class="headline txt-left">${result.list.list_label}</h1>
-            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista est&atilde;o na fila para serem pesquisadas. Voc&ecirc; poder&aacute; encontrar mais resultados em breve.</div>' : "")}
+            ${((result.list.search_in_progress > 0) ? '<div class="alert alert-info sm" role="alert">'+result.list.search_in_progress+' imagens nesta lista est&atilde;o na fila para serem pesquisadas. Logo logo, mais resultados poder&atilde;o ser encontrados na listagem abaixo.</div>' : "")}
  
         <div id="chart_div" style="width:100%;overflow:none"></div>
     </div> <!-- search panel top -->
