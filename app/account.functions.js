@@ -70,9 +70,9 @@ $( document ).ready(function(){
         }
 
     }else{
-        $("#topRightLink").html(
+        /*$("#topRightLink").html(
             `<a href="/login">Logar / Registrar</a>`
-        )
+        )*/
     }
 
 })
