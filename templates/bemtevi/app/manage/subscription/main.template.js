@@ -49,7 +49,7 @@ function manageSubscriptionPageTemplate(params){
                             ${ Object.keys(params.packages).map(function(i){
 								var package = params.packages[i]
 		
-								return `<op&ccedil;&atilde;o ${(params.user_info.credits.package_id === package.package_id) ? "selecionada" : ""} value="${package.package_id}" data-package-id="${package.package_id}" data-package-label="${package.package_label}" data-price="${package.price}" data-credits="${package.searches}" data-monitor="${package.monitor}">
+								return `<op&ccedil;&atilde;o ${(params.user_info.credits.package_id === package.package_id) ? "selecionada" : "Pacote1"} value="${package.package_id}" data-package-id="${package.package_id}" data-package-label="${package.package_label}" data-price="${package.price}" data-credits="${package.searches}" data-monitor="${package.monitor}">
                                         $${package.price} - ${package.package_label} - ${package.monitor.toLocaleString()} imagens monitoradas & ${package.searches.toLocaleString()} buscas</option>`
                               
                             }).join('')}
