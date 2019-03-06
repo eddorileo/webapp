@@ -10,7 +10,7 @@
       </div> <!-- cell -->
 
       <div class="cell">
-        &copy; 2019 Buscalogo. Dados disponibilizados sem alteração a partir de fontes públicas. Acurácia não garantida.
+        &copy; 2019 Buscalogo. Dados disponibilizados sem alterações a partir de fontes públicas. Acurácia não garantida.
       </div> <!-- cell -->      
     </div> <!-- table -->
   </div> <!-- main -->
