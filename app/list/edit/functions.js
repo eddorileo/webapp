@@ -174,7 +174,7 @@ function drawImages(images){
                         <p><a href="`+i.signed_image_url+`" target=_blank>`+i.filename+`</a><br>
                         <strong>Dom&iacute;nios infratores:</strong> `+i.unique_hosts+`<BR>
                         <strong>P&aacute;ginas infratoras:</strong> `+i.unique_pages+`<BR>
-                        <a href=\"/list/`+list_id+`/query?filters[image_id-eql]=`+i.image_id+`" class="link">Ver infra&ccedil;&otilde;es</a>
+                        <a href=\"/list/`+list_id+`/query?filters[image_id-eql]=`+i.image_id+`" class="link">Ver busca por infra&ccedil;&otilde;es</a>
                         </p> 
                     </span>
                     <span>
