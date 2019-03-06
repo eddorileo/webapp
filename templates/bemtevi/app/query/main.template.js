@@ -9,7 +9,7 @@ function queryPageTemplate(result,request,resolved_tags){
     </div> <!-- search panel top -->
 
     <div id="filters" class="search-panel-filter"></div>
-    <a href="#" id="showAPI" class="link-a pull-right">Ver chave de busca</a>
+    <!-- <a href="#" id="showAPI" class="link-a pull-right">Ver chave de busca</a> -->
     <input type=text id='apiquery' style='display:none; width:100%' />
     <div class="search-panel-content">
         <div class="row">
