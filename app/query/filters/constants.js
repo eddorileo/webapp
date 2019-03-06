@@ -45,7 +45,7 @@ const metric_types = {
     },
     date: {
         sort: {
-            asc:"Primeiro ao &Uacute/ltimo",
+            asc: "Frente pra Tr&aacute;s",
             desc: "Tr&aacute;s pra Frente"
         },
         operators: [
