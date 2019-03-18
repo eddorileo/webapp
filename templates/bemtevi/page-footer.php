@@ -34,6 +34,22 @@
 <script src="<?php echo template_path(true); ?>/js/navigation-menu.js?stamp=<?php echo $cache_version; ?>"></script>
 <script src="/app/api.functions.js?stamp=<?php echo $cache_version; ?>"></script>
 <script src="/app/account.functions.js?stamp=<?php echo $cache_version; ?>"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){
+  i['GoogleAnalyticsObject']=r;
+  i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},
+  i[r].l=1*new Date();
+  a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+  a.async=1;
+  a.src=g;
+  m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-49278648-2', 'auto');
+ga('send', 'pageview');
+</script>
+
 <!-- END JAVASCRIPT -->
 
 </body>
